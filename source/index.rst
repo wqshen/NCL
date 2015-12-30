@@ -3,15 +3,15 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to ncl's documentation!
+欢迎来到NCL中文学习手册!
 ===============================
 
-Contents:
+目录:
 
 .. toctree::
    :maxdepth: 2
 
-
+   NCL中文学习手册
 
 Indices and tables
 ==================
