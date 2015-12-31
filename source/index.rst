@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-欢迎来到NCL中文学习手册!
+欢迎来到NCL语言学习指南!
 ===============================
 
 目录:
@@ -11,7 +11,7 @@
 .. toctree::
    :maxdepth: 2
 
-   NCL中文学习手册
+   NCL
 
 Indices and tables
 ==================

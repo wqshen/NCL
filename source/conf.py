@@ -47,7 +47,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'ncl'
+project = u'NCL学习指南'
 copyright = u'2015, MCS强'
 author = u'MCS强'
 
