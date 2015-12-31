@@ -12,7 +12,7 @@ NCL
 .. toctree::
    :maxdepth: 2
 
-   安装 
+   installation
 
 Indices and tables
 ==================
