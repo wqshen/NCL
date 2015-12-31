@@ -18,6 +18,7 @@ Linux
 Ubuntu将NCL加入了其代码仓库，因此安装NCL将变得异常方便，你只需要下面这行代码
 
 .. code:: bash
+
     sudo apt-get install ncl-ncarg
 
 
