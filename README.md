@@ -1,3 +1,3 @@
-# NCL
+# NCL语言学习指南
 
-NCL中文学习手册 - ReadTheDocs
+NCL语言学习指南 - ReadTheDocs
