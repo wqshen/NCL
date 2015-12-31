@@ -10,9 +10,23 @@ Linux
 通常我们需要做的是一下几步
 
 1. *查看Linux平台和gcc版本*
+
+.. code:: sh
+    cat /proc/version
+
 2. *下载对应的预编译包*
+    `ncl-6.3.0 <https://www.earthsystemgrid.org/dataset/ncl.630.html>`
 3. *解压到你要安装的目录*
+
+.. code:: sh
+    tar -zvxf  ncl_ncarg-6.3.0.Linux*.gz
+
 4. *设置对应的环境变量*
+
+.. code:: sh
+
+    export NCARG_ROOT=/usr/local/ncl-6.3.0
+    export PATH=$NCARG_ROOT/bin:$PATH
 
 - **Ubuntu上通过apt-get安装**
 Ubuntu将NCL加入了其代码仓库，因此安装NCL将变得异常方便，你只需要下面这行代码
