@@ -5,7 +5,7 @@
 
 欢迎来到NCL语言学习指南!
 ===============================
-NCL全称为NCAR Command Language，是有美国大气研究中心（NCAR）开发的
+NCL全称为NCAR Command Language，是由美国大气研究中心（NCAR）开发的
 专门用于科学资料分析与可视化的一门解释型语言。
 
 NCL支持的数据类型包括NetCDF 3/4，GRIB 1/2, HDF 4/5，HDF-EOS 2/5，
@@ -13,7 +13,9 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
 高质量的图形并且有大量的图形源（resource）可被用于自定义图形。大量
 示例脚本和相应的图形可在官网（`ncl.ucar.edu <http://www.ncl.ucar.edu>`_）学习。
 
-
+本学习指南尝试通过一个更友好的方式将NCL语言知识提供给中国的NCL学习者。
+如果你对本指南中的任何论述存在怀疑、困惑，或者在学习NCL过程中有任何问题，
+欢迎到本项目GitHub的Issues页反馈以帮助改善本指南。
 
 目录:
 ------------------
