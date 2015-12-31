@@ -14,7 +14,7 @@ Linux
 3. *解压到你要安装的目录*
 4. *设置对应的环境变量*
 
-- Ubuntu上通过apt-get安装
+- **Ubuntu上通过apt-get安装**
 Ubuntu将NCL加入了其代码仓库，因此安装NCL将变得异常方便，你只需要下面这行代码
 
 .. code:: bash
