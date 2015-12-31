@@ -15,6 +15,12 @@ NCL都有预编译，因此通常情况下，我们只需要下载对应于自�
 3. *解压到你要安装的目录*
 4. *设置对应的环境变量*
 
+- Ubuntu上通过apt-get安装
+.. coed:: plain
+
+sudo apt-get install ncl-ncarg
+
+
 Windows
 -----------
 
