@@ -30,6 +30,9 @@ Linux
     export NCARG_ROOT=/usr/local/ncl-6.3.0
     export PATH=$NCARG_ROOT/bin:$PATH
 
+.. note:: 当你的Linux平台上有一个较高版本的gcc时，你可以下载NCL预编译包中的较低
+gcc版本编译包，通常它们具有先后的兼容性。
+
 - **Ubuntu上通过apt-get安装**
 Ubuntu将NCL加入了其代码仓库，因此安装NCL将变得异常方便，你只需要下面这行代码
 
