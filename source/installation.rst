@@ -15,8 +15,10 @@ Linux
     cat /proc/version
 
 2. *下载对应的预编译包*
+
     `ncl-6.3.0 <https://www.earthsystemgrid.org/dataset/ncl.630.html>`_
-3. *解压到你要安装的目录*
+
+3. *在你希望的安装目录中解压*
 
 .. code:: sh
     tar -zvxf  ncl_ncarg-6.3.0.Linux*.gz
