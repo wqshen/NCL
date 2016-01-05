@@ -29,10 +29,10 @@ Linux
 
 .. code:: sh
 
-    export NCARG_ROOT=/usr/local/ncl-6.3.0
+    export NCARG_ROOT=<path_to_install>
     export PATH=$NCARG_ROOT/bin:$PATH
 
-.. note:: 当你的Linux平台上有一个较高版本的gcc时，你可以下载NCL预编译包中的较低gcc版本编译包，通常它们具有向后的兼容性。
+.. note:: 当你的Linux平台上有一个较高版本的gcc时，你可以下载NCL预编译包中的较低gcc版本编译包。通常它们具有向后的兼容性。
 
 - **Ubuntu上通过apt-get安装**
 Ubuntu将NCL加入了其代码仓库，因此安装NCL将变得异常方便，你只需要下面这行代码
@@ -52,6 +52,10 @@ cygwin和虚拟机之间，我们该如何选择？目前个人电脑的配置�
 一点。如果你是在开发Windows应用程序的话，那么我想你大概没有别的选择，老实地用
 cygwin吧。
 
+使用虚拟机操作系统来学习NCL，这里有一个推荐的组合，使用VMware虚拟机软件和Ubuntu
+操作系统可能会给你打来不错的体验。由于Windows下虚拟机软件的安装和添加虚拟系统的操作十分的简单，这里并不赘述。
+
+由于Cygwin镜像资源的限制，在Windows中安装Cygwin需要耗费大量的时间，这里有个讨巧的方法，那就是下载别人的Cygwin和NCL整合包，解压即可。
 _________
 
 Mac OX
