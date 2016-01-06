@@ -59,5 +59,6 @@ cygwin吧。
 
 _________
 
-Mac OX
+Mac OS
 -----------
+暂略，等我有个Mac Book再说。
