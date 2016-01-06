@@ -63,7 +63,7 @@ ________________________________________________________________________________
     res@mpMaxLonF = 180.
     res@mpMinLatF = 0.
     res@mpMaxLatF = 50.
-    
+
     :emphasize-lines: 2-5
 
 在以上的代码中，我们给源变量赋予了四个属性，它们分别控制地图的起始和结束的经度、
@@ -75,7 +75,7 @@ ________________________________________________________________________________
 --------------------------
 NCL中有许多的绘图函数来绘制不同类型的图，包括非地图类和地图类等。比如当你需要绘制
 等值线时，你需要使用的绘图函数名中必须有contour，而绘制风场箭头时，则是vector。
-所有的绘图函数可以查阅`<https://www.ncl.ucar.edu/Document/Functions/graphics_routines.shtml>`_
+所有的绘图函数可以查阅官网，`传送门。 <https://www.ncl.ucar.edu/Document/Functions/graphics_routines.shtml>`_
 
 在这里，我们使用一个最常用的地图绘图函数\ **gsn_csm_map_ce**\ 来绘制一张
 Cylindrical equidistant (ce后缀) 投影的空白地图。
