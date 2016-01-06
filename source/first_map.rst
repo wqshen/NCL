@@ -96,6 +96,6 @@ ________________________________________________________________________________
 
 通过以上的几句代码，你就绘制了一张东半球大平洋地区的地图。你可以随意更改四个源变
 量属性的值将地图缩放到不同大小的地区。当然，如果是全球的话，你大可以直接将
-:code:*plot = gsn_csm_map_ce(wks, res)*改写为:code:*plot = gsn_csm_map_ce(wks, False)*
+:code: *plot = gsn_csm_map_ce(wks, res)* 改写为:code: *plot = gsn_csm_map_ce(wks, False)* 
 注意这里我们之间将图形函数的第二参数，也就是源变量的值设置为False了，这代表使用
 gsn_csm_map_ce函数默认的图形属性设置。
