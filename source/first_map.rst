@@ -73,6 +73,7 @@ NCL中有许多的绘图函数来绘制不同类型的图，包括非地图类�
 Cylindrical equidistant (ce后缀) 投影的空白地图。
 
 .. code::
+
     plot = gsn_csm_map_ce(wks, res)
 
 这个绘图函数接受两个参数，
