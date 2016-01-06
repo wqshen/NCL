@@ -23,6 +23,7 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
    :maxdepth: 2
 
    installation
+   first_map
 
 函数
 -----------------
