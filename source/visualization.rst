@@ -40,7 +40,13 @@ NCL直接支持的数据类型有以下几种：
 ^^^^^^^^^^^^^^^^^^^^
 
 .. literalinclude:: ../code_examples/visualization/visual_fnl.ncl
-    :emphasize-lines: 4, 6, 11, 12
+    :emphasize-lines: 4, 5, 6, 11, 12
+
+#. 读取文件中的变量，语法是 :code:`f->var_name` ，其中f为文件句柄，而var_name则是
+文件f中的待读取的变量名
+#. :code:`printVarSummary` 函数打印NCL变量的概略，包括维数和可能的坐标以及属性
+#. :code:`cnFillOn` 属性设置等值线填色的开/关，默认为关，也就是不填色
+#. :code:`cnLinesOn` 属性设置等值线线条的开/关，默认为开，也就是画线图
 
 不出意外的话，你将看到屏幕上出现了这样一个图形窗口：
 
