@@ -25,7 +25,7 @@ NCL直接支持的数据类型有以下几种：
 
 支持格式的文件读取
 ^^^^^^^^^^^^^^^^^^^^
-对于NCL直接支持的格式文件，读取起来相当简单，只需要使用:code:`addfile` 函数即可。
+对于NCL直接支持的格式文件，读取起来相当简单，只需要使用 :code:`addfile` 函数即可。
 语法如下::
 
     f = addfile(file_path, status)
@@ -38,9 +38,9 @@ NCL直接支持的数据类型有以下几种：
 
 范例
 ^^^^^^^^^^^^^^^^^^^^
-.. code::
 
-    f = addfile("fnl_20001025_18_00"+".grb", "r")
-    print(f)  ;用print查看下文件变量的信息,会将文件中所有的变量概略打印到屏幕
-    temp = f->TMP_3_ISBL  ;读入文件变量到变量temp中
-    printVarSummary(temp)  ;看看变量的信息
+.. literalinclude:: ../code_examples/visualization/visual_fnl.ncl
+    :emphasize-lines: 4, 6, 11, 12
+
+不出意外的话，你将看到屏幕上出现了这样一个图形窗口：
+.. image:: images/visualization/visual_fnl.png
