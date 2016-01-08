@@ -31,9 +31,9 @@ NCL数据类型
 数值类型说白点就是常用的整数、浮点数（或许你叫小数），也是在各类语言中都存在的基
 本类型。numeric类型下面分属的各种类型支持NCL中所有的代数函数。由于NCL的数据结构参
 照NetCDF，随着NetCDF中数据类型的改变，NCL在5.2.0版本中也增添了几种数值类型（int64，
-uint64，ulong，uint，ushort）以保持与NetCDF数据结构的同步。为了保持向后的兼容性，
+uint64，ulong，uint，ushort，ubyte）以保持与NetCDF数据结构的同步。为了保持向后的兼容性，
 NCL有增加了两个关键词，分别是enumeric (extra-numeric)和snumeric (super-numeric)，
-前者（enumeric）特指新增加的这5种类型，而后者则指代所有的数值型，包括最初的numeric
+前者（enumeric）特指新增加的这几种类型，而后者则指代所有的数值型，包括最初的numeric
 和新增加的enumeric。这些关键词通常出现在函数和程序定义的形参类型制定中。对于初学
 者而言，这些复杂的内部细节尚不需要完全知悉，稍作了解即可。
 
