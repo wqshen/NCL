@@ -25,6 +25,7 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
    installation
    first_map
    visualization
+   basic_syntax
 
 函数
 -----------------
