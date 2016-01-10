@@ -17,7 +17,7 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
 如果你对本指南中的任何论述存在怀疑、困惑，或者在学习NCL过程中有任何问题，
 欢迎到本项目GitHub的Issues页反馈以帮助改善本指南。
 
-开始使用:
+开始使用
 ------------------
 .. toctree::
    :maxdepth: 2
@@ -25,7 +25,16 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
    installation
    first_map
    visualization
-   basic_syntax
+
+基础语法
+-------------------
+.. toctree::
+   :maxdepth: 2
+
+   language_introduction
+   language_data_type
+   language_array
+   language_variable
 
 函数
 -----------------
