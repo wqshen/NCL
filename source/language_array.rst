@@ -66,7 +66,7 @@ new语句包含的参数：
 有许多其他方式也可以创建数组，下面简单介绍几种常用的。
 
 计算中常常面临的一种情况是创建等差序列，NCL中包含两个函数可以用来处理这种情况，
-分别是:code:`ispan` 和 :code:`fspan` 。
+分别是 :code:`ispan` 和 :code:`fspan` 。
 
 :code:`ispan` 创建根据初值、终值和步长来创建等差整数序列
 :code:`ispan(start, finish, stride)` 
