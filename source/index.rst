@@ -40,13 +40,13 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
    language_operator_expression
    language_loop
 
-函数
+食谱
 -----------------
 
 图形源（Resources）
 -----------------
 
-食谱
+库函数
 -----------------
 
 其他
