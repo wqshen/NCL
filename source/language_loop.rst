@@ -112,8 +112,8 @@ else if，而是对if语句的嵌套。因而这个if后面同样需要end if。
 
 关于缺测
 ^^^^^^^^^^^^^^^^^^^^^^^
-逻辑表达式中已经提到在NCL中的逻辑值不仅包含True，False，还包含了_FillValue。
-而在if语句中，逻辑表达式的值并不允许是_FillValue，事实上使用以下语句判断元素是否为
+逻辑表达式中已经提到在NCL中的逻辑值不仅包含True，False，还包含了missing。
+而在if语句中，逻辑表达式的值并不允许是missing，事实上使用以下语句判断元素是否为
 缺测时，将出现错误：
 
 .. code::
@@ -125,7 +125,7 @@ else if，而是对if语句的嵌套。因而这个if后面同样需要end if。
 
     fatal:The result of the conditional expression yields a missing value. NCL can not determine branch, see ismissing function
 
-在该if语句中，逻辑表达式的值将是_FillValue，所以引发异常。
+在该if语句中，逻辑表达式的值将是missing，所以引发异常。
 正确的判断是否为缺测的方式是使用 :code:`ismissing` 函数
 
 .. code::
