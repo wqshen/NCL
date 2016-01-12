@@ -37,6 +37,7 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
    language_data_type
    language_array
    language_variable
+   language_operator_expression
    language_loop
 
 函数
