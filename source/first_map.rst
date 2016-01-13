@@ -100,3 +100,19 @@ ________________________________________________________________________________
 :code:`plot = gsn_csm_map_ce(wks, False)`
 注意这里我们之间将图形函数的第二参数，也就是源变量的值设置为False了，这代表使用
 gsn_csm_map_ce函数默认的图形属性设置。
+
+以下代码可复制到NCL命令行中测试::
+
+    begin
+        wks = gsn_open_wks("X11", "first_map")
+        res = True
+        res@mpMinLonF = 100.
+        res@mpMaxLonF = 180.
+        res@mpMinLatF = 0.
+        res@mpMaxLatF = 50.
+        plot = gsn_csm_map_ce(wks, res)
+    end
+
+生成的图形
+
+.. image:: images/first_map/first_map.PNG
