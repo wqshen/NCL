@@ -284,3 +284,5 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+mathjax_path = 'MathJax.js?config=TeX-AMS_HTML'
