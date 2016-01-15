@@ -4,7 +4,25 @@
 
 .. option:: mpProjection
 
-    设定地图类函数所使用的地图投影方式。
+    设定地图类函数所使用的地图投影方式。可选的投影方式有
+
+    - Orthographic
+    - Stereographic
+    - LambertEqualArea
+    - Gnomonic
+    - AzimuthalEquidistant
+    - Satellite
+    - PseudoMollweide
+    - Mercator
+    - CylindricalEquidistant
+    - LambertConformal
+    - Robinson
+    - CylindricalEqualArea
+    - RotatedMercator
+    - Aitoff
+    - Hammer
+    - Mollweide
+    - WinkelTripel
 
 .. option:: mpMinLatF
 
