@@ -129,7 +129,7 @@ NCL关系运算符和其他语言一致，提供6种关系运算符分别是大�
     :emphasize-lines: 7
 
 
-.. literalinclude:: ../code_examples/language_operator_expression/var_to_var_assign_1.ncl
+.. literalinclude:: ../code_examples/language_operator_expression/var_to_var_assign_2.ncl
     :emphasize-lines: 12
 
 重赋值运算符
