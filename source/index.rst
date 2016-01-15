@@ -45,6 +45,10 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
 
 图形源（Resources）
 -----------------
+.. toctree::
+   :maxdepth: 2
+
+   res_mp
 
 库函数
 -----------------
