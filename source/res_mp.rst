@@ -2,9 +2,7 @@
 =================
 
 
-.. option:: 
-
-    `mpProjection <http://www.ncl.ucar.edu/Document/Graphics/Resources/mp.shtml#mpProjection>`_
+.. |option|:: `mpProjection <http://www.ncl.ucar.edu/Document/Graphics/Resources/mp.shtml#mpProjection>`_
 
     设定地图类函数所使用的地图投影方式。可选的投影方式有
 
