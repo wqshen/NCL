@@ -18,3 +18,20 @@
 
 .. image:: images/donate/20RMB.jpg
     :scale: 30 %
+
+微信打赏
+---------------------
+.. image:: images/donate/weichat_0.5RMB.jpg
+    :scale: 20 %
+
+.. image:: images/donate/weichat_1RMB.jpg
+    :scale: 20 %
+
+.. image:: images/donate/weichat_5RMB.jpg
+    :scale: 20 %
+
+.. image:: images/donate/weichat_10RMB.jpg
+    :scale: 20 %
+
+.. image:: images/donate/weichat_20RMB.jpg
+    :scale: 20 %
