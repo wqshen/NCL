@@ -57,6 +57,7 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
 库函数
 -----------------
 
+
 其他
 -----------------
 .. toctree::
@@ -64,3 +65,11 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
 
    geodiag
    KML
+
+
+打赏
+----------------
+.. toctree::
+   :maxdepth: 2
+
+   donate
