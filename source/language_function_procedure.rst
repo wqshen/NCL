@@ -16,6 +16,7 @@
 :code:`integer` ，:code:`string` 来指定该形参的类型。
 
 .. code::
+
     function function_name ( arg1:type1, arg2:type2, ... )
 
 2. 声明局部变量（可选步骤）
@@ -24,6 +25,7 @@
 :code:`local` 开头，后接所有在函数中出现的局部变量，各个变量间以逗号隔开。
 
 .. code::
+
     local local_var1, local_var2, local_var3, ...
 
 3. 使用begin来开始封装函数主体
@@ -32,12 +34,14 @@
 使用 :code:`begin` 和:code:`end` 来封装函数主体，否则将引发NCL异常。
 
 .. code::
+
     begin
 
 4. 函数主体语句
 函数的主体是实现函数功能的NCL语句集合
 
 .. code::
+
     statement list
 
 5. 返回函数结果（可选步骤）
@@ -46,11 +50,13 @@
 其中即可。实际上，由于return是一个语句，这对括号是可选的，直接空格接返回值亦可。
 
 .. code::
+
     return(return_value)
 
 6. 用end来结束函数主体和封装
 
 .. code::
+
     end
 
 
