@@ -6,11 +6,11 @@
 
 函数和子程序定义
 -------------------
-定义函数和子程序的区别不大，除了为首的关键词，函数使用 :code:`function` ，而子程序
-使用 :code:`procedure` 。定义一个函数基本上包含以下几个步骤，
+定义函数和子程序的语法区别不大，除了为首的关键词，函数使用 :code:`function` ，
+而子程序使用 :code:`procedure` 。定义一个函数基本上包含以下几个步骤，
 
 1. 定义函数名
-由一个关键词:code:`function` 或 :code:`procedure` 开头，空格后接函数名称，注意函
+由一个关键词 :code:`function` 或 :code:`procedure` 开头，空格后接函数名称，注意函
 数名的取法要紧贴函数所实现的功能，同时建议使用下划线命名法，函数名后是以小括号括
 起来的的形参列表，每一个形参用逗号隔开，形参后可用冒号接NCL类型关键词如
 :code:`integer` ，:code:`string` 来指定该形参的类型。
@@ -27,9 +27,9 @@
     local local_var1, local_var2, local_var3, ...
 
 3. 使用begin来开始封装函数主体
-之前的学习中，我们已经知道，程序主体可以用 :code:`begin`和 :code:`end`
+之前的学习中，我们已经知道，程序主体可以用 :code:`begin` 和 :code:`end`
 来封装，封装后的运行将首先进行语法检查，且这种封装是可选的。而在函数定义中，必须
-使用 :code:`begin`和:code:`end` 来封装函数主体，否则将引发NCL异常。
+使用 :code:`begin` 和:code:`end` 来封装函数主体，否则将引发NCL异常。
 
 .. code::
     begin
