@@ -102,6 +102,7 @@ function 函数名 (变量1[第1维大小], 变量2[*表示任意大小]:数据�
     
 .. literalinclude:: ../code_examples/function_procedure/local_val.ncl
     :emphasize-lines: 13-14, 21-22
+    :linenos:
 
 - 在14行中，我们试图使用函数 :code:`array_insert` 中的 :code:`dim_val` 变量，引发NCL异常
 - 在22行，我们又试图使用函数 :code:`array_insert` 中的 :code:`new_arr` 变量，引发NCL异常并退出
