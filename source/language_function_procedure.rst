@@ -103,10 +103,8 @@ function 函数名 (变量1[第1维大小], 变量2[*表示任意大小]:数据�
 .. literalinclude:: ../code_examples/function_procedure/local_val.ncl
     :emphasize-lines: 13-14, 21-22
 
-- 在14行中，我们试图使用函数 :code:`array_insert` 中的 :code:`dim_val` 变量，引发
-NCL异常
-- 在22行，我们又试图使用函数:code:`array_insert` 中的 :code:`new_arr` 变量，引发
-NCL异常并退出
+- 在14行中，我们试图使用函数 :code:`array_insert` 中的 :code:`dim_val` 变量，引发NCL异常
+- 在22行，我们又试图使用函数 :code:`array_insert` 中的 :code:`new_arr` 变量，引发NCL异常并退出
 
 全局变量
 ^^^^^^^^^^^^^^^
@@ -114,6 +112,6 @@ NCL异常并退出
 
 
 
-[1] https://zh.wikipedia.org/wiki/%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F
-[2] https://zh.wikipedia.org/wiki/%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F
+.. [1] https://zh.wikipedia.org/wiki/%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F
+.. [2] https://zh.wikipedia.org/wiki/%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F
 
