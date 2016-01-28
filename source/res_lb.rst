@@ -1,3 +1,6 @@
+色条源属性
+=======================
+
 .. option:: lbAutoManage
     The lbAutoManage switch determines how LabelBar operates; when True, LabelBar manages the sizing of the title and the label text. The title is always sized to fit within the currently set boundaries of the LabelBar given any text angle, aspect ratio, etc. The labels also are sized to fit within the current boundary. Additionally, the sizing of the labels is managed so that under any rotation, the labels will not overlap. Also the label justification is managed such that, given any rotation, the end of the label string aligns with the correct LabelBar box. When off, you may directly size the labels and text as you please. However, under rotation, the justification of the labels does not change, and, although the text is moved out of the way of the LabelBar boxes, it will not necessarily line up correctly. In practice, when working interactively, a good method is to create a basic LabelBar layout close to the desired size with the lbAutoManage mode on, then switch it off to tune the text size precisely to your taste.
     Currently, when the text of the labels is rotated, the size of the LabelBar may increase slightly along the axis of orientation.
