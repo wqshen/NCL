@@ -216,7 +216,7 @@ latex_elements = {
 #'preamble': '',
 # Latex figure (float) alignment
 #'figure_align': 'htbp',
-'preamble': '''
+'preamble': r'''
 \\hypersetup{unicode=true}
 \\usepackage{CJKutf8}
 \\begin{CJK}{UTF8}{gbsn}
