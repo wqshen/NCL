@@ -1,8 +1,9 @@
-等值线源属性
+等值线源属性_
 =================
 
-.. option:: cnCellFillEdgeColor
+.. _等值线源属性: http://www.ncl.ucar.edu/Document/Graphics/Resources/cn.shtml
 
+.. option:: cnCellFillEdgeColor_
 
 .. option:: cnCellFillMissingValEdgeColor
 
