@@ -353,29 +353,36 @@
 
         In any case, ContourPlot sets the elements of the array resource cnLevels to the values of the contour levels chosen and the read-only resource cnLevelCount to the number of levels.
 
+
+    .. _ManualLevels:
+
     - ManualLevels 手动等值线阶
 
         ManualLevels mode bases the choice of contour levels on the values of the resources cnLevelSpacingF, cnMinLevelValF, and cnMaxLevelValF. Starting at cnMinLevelValF, contour levels are created at intervals spaced by the value of cnLevelSpacingF until cnMaxLevelValF is reached. The final contour level will always be cnMaxLevelValF. ContourPlot sets elements of the array resource cnLevels to the values of each contour level chosen and the read-only resource cnLevelCount to the number of levels. If the current value of cnMaxLevelCount is less than cnLevelCount, it is reset to the value of cnLevelCount. However, if the level count would exceed the absolute maximum number of levels, currently 255, ContourPlot issues a warning and chooses a new value of cnLevelSpacingF based on the value of cnMaxLevelCount.
         If you choose ManualLevels selection mode when the ContourPlot object is created, and if you do not set cnMinLevelValF, ContourPlot will choose levels as if you had set AutomaticLevels mode. If you set cnMinLevelValF only, a default spacing is used, and the value of cnMaxLevelValF is determined as it would be for AutomaticLevels mode.
 
+    .. _ExplicitLevels:
+
     - ExplicitLevels 显式自定义等值线阶
 
         这一模式允许你使用源 `cnLevels`_ 数组来显式地指定每一条等值线的值。如果
         你选择此模式而不设定源 `cnLevels`_ ，等值线图将假定你指定使用自动等值线
-        阶模式，即 `AutomaticLevels`_ 来设定等值线阶。因此，当你设定 ``ExplicitLevels``
+        阶模式，即 `AutomaticLevels`_ 来设定等值线阶。因此，当你设定 `ExplicitLevels`_
         模式时，不论你是否显式地设定了源 `cnLevels`_ ，等值线图都将使用当前的
         `cnLevels`_ 的内容。如果源 `cnLevels`_ 的元素个数超过了等值线阶的最大
         数量（当前为255条），等值线图将提出警告并设定模式回默认的自动等值线阶
-        （ ``AutomaticLevels`` ）。
+        （ `AutomaticLevels`_ ）。
 
         注意等值线图将总是对源 `cnLevels`_ 数组的元素排序为单调递增的序列。排序
         后的数组，使用第一个元素设定 `cnMinLevelValF`_ ， 最后一个元素设定
         `cnMaxLevelValF`_ ，元素间的间隔平均值设定 `cnLevelSpacingF`_ 。
 
+    .. _EqualSpacedLevels:
+
     - EqualSpacedLevels 等间隔等值线阶
 
         这种模式下，等值线图使用数据的最大值和最小值的差除以
-        `cnMaxLevelCount`_+1 得到的值作为等值线的间隔。即设定
+        `cnMaxLevelCount`_ +1 得到的值作为等值线的间隔。即设定 
         `cnLevelSpacingF`_ 等于计算的间隔，设定 `cnMinLevelValF`_ 
         等于数据最小值加上 `cnLevelSpacingF`_ , 设定 `cnMaxLevelValF`_ 
         等于数据最大值减去 `cnLevelSpacingF`_ 。
@@ -384,17 +391,17 @@
 
         等值线图同时设定只读源 `cnLevelSpacingF`_ 等于 `cnMaxLevelCount`_ 。
 
-    默认值: AutomaticLevels
+    默认值:  `AutomaticLevels`_
 
 
 .. _cnLevelSpacingF:
 
 .. option:: cnLevelSpacingF
 
-    当 `cnLevelSelectionMode`_ 设定为手动或者设为自动且设定了 `cnLevelSpacingF`_ 时，
+    当 `cnLevelSelectionMode`_ 设定为手动（ `ManualLevels`_ ）或者设为自动且设定了 `cnLevelSpacingF`_ 时，
     `cnLevelSpacingF`_ 决定了等值线的间隔。否则，等值线图形对象将基于事实上选择
     的等值线阶来设定 `cnLevelSpacingF`_ 的值。当等值线阶选择模式（ `cnLevelSelectionMode`_ ）
-    设为显示自定义（ExplicitLevels）时， `cnLevelSpacingF`_ 将被设定到等值线间隔的算
+    设为显示自定义（ `ExplicitLevels`_ ）时， `cnLevelSpacingF`_ 将被设定到等值线间隔的算
     术平均值。
     
     默认值：5.0
