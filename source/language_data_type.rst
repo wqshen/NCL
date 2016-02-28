@@ -205,21 +205,69 @@ NCL中的类型转换函数只能将某一特定数据类型转换到另一特�
 从5.2.0版开始，一批新的类型转换函数集被引入，这类函数以 :code:`to` 开头，可以将任
 何可能的数据类型转换到指定的数据类型。
 
-tobyte
-toubyte
-toshort
-toushort
-toint/tointeger
-toint64
-tolong
-toulong
-tofloat
-todouble
-tochar
-tostring
-tostring_with_format
-totype
-tounsigned
++-----------------------+---------------------------------------------+
+|   函数                |   说明                                      |
++=======================+=============================================+
+| todouble_             |                                             |
++-----------------------+---------------------------------------------+
+| tofloat_              |                                             |
++-----------------------+---------------------------------------------+
+| tolong_               |                                             |
++-----------------------+---------------------------------------------+
+| toulong_              |                                             |
++-----------------------+---------------------------------------------+
+| toint64_              |                                             |
++-----------------------+---------------------------------------------+
+| touint64_             |                                             |
++-----------------------+---------------------------------------------+
+| tointeger_            |                                             |
++-----------------------+---------------------------------------------+
+| toint_                |                                             |
++-----------------------+---------------------------------------------+
+| touint_               |                                             |
++-----------------------+---------------------------------------------+
+| toshort_              |                                             |
++-----------------------+---------------------------------------------+
+| toushort_             |                                             |
++-----------------------+---------------------------------------------+
+| tobyte_               |                                             |
++-----------------------+---------------------------------------------+
+| toubyte_              |                                             |
++-----------------------+---------------------------------------------+
+| tostring_             |                                             |
++-----------------------+---------------------------------------------+
+| tochar_               |                                             |
++-----------------------+---------------------------------------------+
+| tosigned_             |                                             |
++-----------------------+---------------------------------------------+
+| tounsigned_           |                                             |
++-----------------------+---------------------------------------------+
+| totype_               |                                             |
++-----------------------+---------------------------------------------+
+| tostring_with_format_ |                                             |
++-----------------------+---------------------------------------------+
+
+
+.. _todouble: http://www.ncl.ucar.edu/Document/Functions/Built-in/todouble.shtml
+.. _tofloat: http://www.ncl.ucar.edu/Document/Functions/Built-in/tofloat.shtml
+.. _tolong: http://www.ncl.ucar.edu/Document/Functions/Built-in/tolong.shtml
+.. _toulong: http://www.ncl.ucar.edu/Document/Functions/Built-in/toulong.shtml
+.. _toint64: http://www.ncl.ucar.edu/Document/Functions/Built-in/toint64.shtml
+.. _touint64: http://www.ncl.ucar.edu/Document/Functions/Built-in/touint64.shtml
+.. _tointeger: http://www.ncl.ucar.edu/Document/Functions/Built-in/tointeger.shtml
+.. _toint: http://www.ncl.ucar.edu/Document/Functions/Built-in/toint.shtml
+.. _touint: http://www.ncl.ucar.edu/Document/Functions/Built-in/touint.shtml
+.. _toshort: http://www.ncl.ucar.edu/Document/Functions/Built-in/toshort.shtml
+.. _toushort: http://www.ncl.ucar.edu/Document/Functions/Built-in/toushort.shtml
+.. _tobyte: http://www.ncl.ucar.edu/Document/Functions/Built-in/tobyte.shtml
+.. _toubyte: http://www.ncl.ucar.edu/Document/Functions/Built-in/toubyte.shtml
+.. _tostring: http://www.ncl.ucar.edu/Document/Functions/Built-in/tostring.shtml
+.. _tochar: http://www.ncl.ucar.edu/Document/Functions/Built-in/tochar.shtml
+.. _tosigned: http://www.ncl.ucar.edu/Document/Functions/Built-in/tosigned.shtml
+.. _tounsigned: http://www.ncl.ucar.edu/Document/Functions/Built-in/tounsigned.shtml
+.. _totype: http://www.ncl.ucar.edu/Document/Functions/Built-in/totype.shtml
+.. _tostring_with_format: http://www.ncl.ucar.edu/Document/Functions/Built-in/tostring_with_format.shtml
+
 
 
 ________________________________________________________________________________
