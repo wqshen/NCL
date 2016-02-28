@@ -24,43 +24,43 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
 .. toctree::
    :maxdepth: 2
 
-   installation
-   first_map
-   visualization
+   start/installation
+   start/first_map
+   start/visualization
 
 基础语法
 -------------------
 .. toctree::
    :maxdepth: 2
 
-   language_introduction
-   language_data_type
-   language_array
-   language_variable
-   language_list
-   language_file
-   language_operator_expression
-   language_statement
-   language_loop
-   language_function_procedure
-
-食谱
------------------
+   language/introduction
+   language/data_type
+   language/array
+   language/variable
+   language/list
+   language/file
+   language/operator_expression
+   language/statement
+   language/loop
+   language/function_procedure
 
 图形源（Resources）
 --------------------
 .. toctree::
    :maxdepth: 2
 
-   res_cn
-   res_mp
-   res_sf
-   res_vc
-   res_lb
+   mapresource/res_cn
+   mapresource/res_mp
+   mapresource/res_sf
+   mapresource/res_vc
+   mapresource/res_lb
+
+食谱
+-----------------
 
 库函数
 -----------------
-
+   
 
 其他
 -----------------
