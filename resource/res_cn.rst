@@ -391,10 +391,10 @@
 
 .. option:: cnLevelSpacingF
 
-    当cnLevelSelectionMode设定为手动或者设为自动且设定了cnLevelSpacingF时，
-    cnLevelSpacingF决定了等值线的间隔。否则，等值线图形对象将基于事实上选择
-    的等值线阶来设定cnLevelSpacingF的值。当等值线阶选择模式（cnLevelSelectionMode）
-    设为显示自定义（ExplicitLevels）时，cnLevelSpacingF将被设定到等值线间隔的算
+    当 `cnLevelSelectionMode`_ 设定为手动或者设为自动且设定了 `cnLevelSpacingF`_ 时，
+    `cnLevelSpacingF`_ 决定了等值线的间隔。否则，等值线图形对象将基于事实上选择
+    的等值线阶来设定 `cnLevelSpacingF`_ 的值。当等值线阶选择模式（ `cnLevelSelectionMode`_ ）
+    设为显示自定义（ExplicitLevels）时， `cnLevelSpacingF`_ 将被设定到等值线间隔的算
     术平均值。
     
     默认值：5.0
