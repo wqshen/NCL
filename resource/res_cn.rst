@@ -355,8 +355,8 @@
         这种模式下，等值线图使用数据的最大值和最小值的差除以
         ``cnMaxLevelCount+1`` 得到的值作为等值线的间隔。即设定
         ``cnLevelSpacingF`` 等于计算的间隔，设定 ``cnMinLevelValF`` 
-        等于数据最小值加上 ``cnLevelSpacingF`` , 设定 ``cnMaxLevelValF`` 
-        等于数据最大值减去 ``cnLevelSpacingF`` 。
+        等于数据最小值加上 `cnLevelSpacingF`_ , 设定 ``cnMaxLevelValF`` 
+        等于数据最大值减去 `cnLevelSpacingF`_ 。
 
         你无法设定 ``cnLevelSpacingF`` ``cnMinLevelValF`` ``cnMaxLevelValF`` 。
 
