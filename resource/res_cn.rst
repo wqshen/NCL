@@ -414,7 +414,7 @@
 .. option:: cnLevels
 
     此源属性是一个包含等值线值的浮点型数组，被用于绘制等值线。如果等值线选择模式 
-    （ `cnLevelSelectionMode`_ ）为显示自定义 （ `ExplicitLevels` ）时，你可以设
+    （ `cnLevelSelectionMode`_ ）为显示自定义 （ `ExplicitLevels`_ ）时，你可以设
     定此属性数组元素。否则，等值线图形对象将设定这个数组的元素。
 
     默认值： <dynamic> 动态
@@ -431,7 +431,7 @@
     默认值：Foreground (1) 背景色
 
 
-.. _cnLineColor:
+.. _cnLineColors:
 
 .. option:: cnLineColors
 
