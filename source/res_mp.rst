@@ -1,6 +1,8 @@
 地图源属性
 =================
 
+.. _地图源属性: http://www.ncl.ucar.edu/Document/Graphics/Resources/mp.shtml
+
 .. option:: mpAreaGroupCount
 
 
