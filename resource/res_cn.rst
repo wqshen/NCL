@@ -340,6 +340,8 @@
 .. option:: cnLevelFlags
 
 
+.. _cnLevelSelectionMode:
+
 .. option:: cnLevelSelectionMode 等值线阶选择模式
 
     设置等值线图层中等值线间隔的显示方法。
@@ -391,18 +393,18 @@
 
         等值线图同时设定只读源 `cnLevelSpacingF`_ 等于 `cnMaxLevelCount`_ 。
 
-    默认值:  `AutomaticLevels`_
+    默认值： `AutomaticLevels`_
 
 
 .. _cnLevelSpacingF:
 
 .. option:: cnLevelSpacingF
 
-    当 `cnLevelSelectionMode`_ 设定为手动（ `ManualLevels`_ ）或者设为自动且设定了 `cnLevelSpacingF`_ 时，
-    `cnLevelSpacingF`_ 决定了等值线的间隔。否则，等值线图形对象将基于事实上选择
-    的等值线阶来设定 `cnLevelSpacingF`_ 的值。当等值线阶选择模式（ `cnLevelSelectionMode`_ ）
-    设为显示自定义（ `ExplicitLevels`_ ）时， `cnLevelSpacingF`_ 将被设定到等值线间隔的算
-    术平均值。
+    当 `cnLevelSelectionMode`_ 设定为手动（ `ManualLevels`_ ）或者设为自动且设定了 
+    `cnLevelSpacingF`_ 时， `cnLevelSpacingF`_ 决定了等值线的间隔。否则，等值线图
+    形对象将基于事实上选择的等值线阶来设定 `cnLevelSpacingF`_ 的值。当等值线阶选
+    择模式（ `cnLevelSelectionMode`_ ）设为显示自定义（ `ExplicitLevels`_ ）时， 
+    `cnLevelSpacingF`_ 将被设定到等值线间隔的算术平均值。
     
     默认值：5.0
 
