@@ -49,11 +49,11 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
 .. toctree::
    :maxdepth: 2
 
-   mapresource/res_cn
-   mapresource/res_mp
-   mapresource/res_sf
-   mapresource/res_vc
-   mapresource/res_lb
+   mapsource/res_cn
+   mapsource/res_mp
+   mapsource/res_sf
+   mapsource/res_vc
+   mapsource/res_lb
 
 食谱
 -----------------
