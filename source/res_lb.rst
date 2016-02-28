@@ -1,4 +1,4 @@
-色条源属性
+色条源属性_
 =======================
 
 .. _色条源属性: http://www.ncl.ucar.edu/Document/Graphics/Resources/lb.shtml
