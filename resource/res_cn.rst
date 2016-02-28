@@ -413,11 +413,37 @@
 
 .. option:: cnLevels
 
+    此源属性是一个包含等值线值的浮点型数组，被用于绘制等值线。如果等值线选择模式 
+    （ `cnLevelSelectionMode`_ ）为显示自定义 （ `ExplicitLevels` ）时，你可以设
+    定此属性数组元素。否则，等值线图形对象将设定这个数组的元素。
+
+    默认值： <dynamic> 动态
+
+
+.. _cnLineColor:
 
 .. option:: cnLineColor
 
+    当等值线单线颜色属性 （ `cnMonoLineColor`_ ）被设定为真（ ``True`` ）时，
+    这个源属性接受一个NhlTColorIndex类（即颜色表序号）或者命名颜色（字符串）来为所有的等值线
+    设定一个统一的颜色。
+
+    默认值：Foreground (1) 背景色
+
+
+.. _cnLineColor:
 
 .. option:: cnLineColors
+
+    The elements of this array of type NhlTColorIndexGenArray can be set using an array of color indexes, an array of named colors, or an array of RGB or RGBA values. If cnMonoFillColor If cnMonoLineColor is False, each member of the array specifies the color of the contour line drawn at the corresponding contour level.
+    Although backwards compatibility is for the most part maintained, beginning with version 6.1.0, this resource supports the new 32-bit color model, as follows:
+
+    If cnLineColors is not set explicitly, its values are derived from the settings of cnLinePalette and cnSpanLinePalette, or, if cnLinePalette is not set, wkColorMap and cnSpanLinePalette. If cnSpanLinePalette is True, the values are distributed evenly through the range of colors available from cnLinePalette or wkColorMap. Otherwise, the values are sequential. If the color indexes are derived from cnLinePalette the first color comes from element 0, whereas if they are derived from wkColorMap, the first color comes from element 2. This is because wkColorMap contains special elements (0 and 1) for the Background and Foreground colors, whereas the palette-type resources do not. If some but not all of the available elements of cnLineColors are explicitly set, the remaining elements will be determined as if cnSpanLinePalette has the value False.
+
+    For backwards compatibility, colors set based on wkColorMap remain indexed to the current color map associated with the workstation. Consequently, if the workstation color map is changed prior to drawing the plot, the color indexes will map into the new color map. In contrast, color indexes derived from the cnLinePalette resource always refer to a specific color regardless of changes to wkColorMap.
+
+    Default: <dynamic>
+
 
 
 .. option:: cnLineDashPattern
@@ -624,8 +650,15 @@
 .. option:: cnMonoLevelFlag
 
 
-.. option:: cnMonoLineColor
+.. _cnMonoLineColor:
 
+.. option:: cnMonoLineColor
+    
+    当设定此源属性为真（ ``True`` ）时，所有的等值线被设定为同样的颜色，这个颜色
+    由标量源属性 `cnLineColor`_ 的值确定。否则，可以使用数组源属性 `cnLineColors`_ 
+    来独立地控制每一条线的颜色。
+
+    默认值： ``True``
 
 .. option:: cnMonoLineDashPattern
 
