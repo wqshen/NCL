@@ -336,10 +336,19 @@
         ManualLevels mode bases the choice of contour levels on the values of the resources cnLevelSpacingF, cnMinLevelValF, and cnMaxLevelValF. Starting at cnMinLevelValF, contour levels are created at intervals spaced by the value of cnLevelSpacingF until cnMaxLevelValF is reached. The final contour level will always be cnMaxLevelValF. ContourPlot sets elements of the array resource cnLevels to the values of each contour level chosen and the read-only resource cnLevelCount to the number of levels. If the current value of cnMaxLevelCount is less than cnLevelCount, it is reset to the value of cnLevelCount. However, if the level count would exceed the absolute maximum number of levels, currently 255, ContourPlot issues a warning and chooses a new value of cnLevelSpacingF based on the value of cnMaxLevelCount.
         If you choose ManualLevels selection mode when the ContourPlot object is created, and if you do not set cnMinLevelValF, ContourPlot will choose levels as if you had set AutomaticLevels mode. If you set cnMinLevelValF only, a default spacing is used, and the value of cnMaxLevelValF is determined as it would be for AutomaticLevels mode.
 
-    - ExplicitLevels 自定义等值线阶
+    - ExplicitLevels 显示自定义等值线阶
 
-        This mode allows you to specify the value of each contour level by explicitly setting the contents of the cnLevels array. If you choose ExplicitLevels selection mode when creating a ContourPlot object, but do not specify the contents of the cnLevels array, ContourPlot will choose levels as if you had specified AutomaticLevels mode. Thereafter, when you set ExplicitLevels mode, ContourPlot uses the current contents of cnLevels, whether or not you set it explicitly.
-        If the number of elements in cnLevels exceeds the absolute maximum number of levels (currently 255), ContourPlot issues a warning and the mode defaults to AutomaticLevels. Note that ContourPlot always sorts the elements of cnLevels into a monotonically increasing sequence. After sorting, cnMinLevelValF is set equal to the value of first element of cnLevels, and cnMaxLevelValF is set to the value of the last element. cnLevelSpacingF is set to the average value of the spacing separating each level.
+        这一模式允许你使用源 ``cnLevels`` 数组来显示地指定每一条等值线的值。如果
+        你选择此模式而不设定源 ``cnLevels`` ，等值线图将假定你指定使用自动等值线
+        阶模式，即 ``AutomaticLevels`` 来设定等值线阶。因此，当你设定 ``ExplicitLevels``
+        模式时，不论你是否显示地设定了源 ``cnLevels`` ，等值线图都将使用当前的
+        ``cnLevels`` 的内容。如果源 ``cnLevels`` 的元素个数超过了等值线阶的最大
+        数量（当前为255条），等值线图将提出警告并设定模式回默认的自动等值线阶
+        （ ``AutomaticLevels`` ）。
+
+        注意等值线图将总是对源 ``cnLevels`` 数组的元素排序为单调递增的序列。排序
+        后的数组，使用第一个元素设定 ``cnMinLevelValF`` ， 最后一个元素设定
+        ``cnMaxLevelValF`` ，元素间的间隔平均值设定 ``cnLevelSpacingF`` 。
 
     - EqualSpacedLevels 等间隔等值线阶
 
@@ -349,7 +358,7 @@
         等于数据最小值加上 ``cnLevelSpacingF`` , 设定 ``cnMaxLevelValF`` 
         等于数据最大值减去 ``cnLevelSpacingF`` 。
 
-        你无法设定``cnLevelSpacingF`` ``cnMinLevelValF`` ``cnMaxLevelValF`` 。
+        你无法设定 ``cnLevelSpacingF`` ``cnMinLevelValF`` ``cnMaxLevelValF`` 。
 
         等值线图同时设定只读源 ``cnLevelSpacingF`` 等于 ``cnMaxLevelCount`` 。
 
