@@ -320,7 +320,7 @@
 .. option:: cnLevelFlags
 
 
-.. option:: cnLevelSelectionMode
+.. option:: cnLevelSelectionMode 等值线阶选择模式
 
     设置等值线图层中等值线间隔的显示方法。
 
