@@ -49,11 +49,11 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
 .. toctree::
    :maxdepth: 2
 
-   mapsource/res_cn
-   mapsource/res_mp
-   mapsource/res_sf
-   mapsource/res_vc
-   mapsource/res_lb
+   resource/res_cn
+   resource/res_mp
+   resource/res_sf
+   resource/res_vc
+   resource/res_lb
 
 食谱
 -----------------
@@ -62,13 +62,13 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
 -----------------
    
 
-其他
+扩展
 -----------------
 .. toctree::
    :maxdepth: 2
 
-   geodiag
-   KML
+   extensions/geodiag
+   extensions/KML
 
 
 打赏

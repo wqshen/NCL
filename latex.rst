@@ -9,7 +9,7 @@
 
    start/index
    source/index
-   mapresource/index
+   resource/index
    cookbook/index
    extensions/index
    donate
