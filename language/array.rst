@@ -110,10 +110,10 @@ ________________________________________________________________________________
     print(b(0, 1)) ; 提取b数组序号为第0行、第1列的元素， 即为2
     print(b(1, 3)) ; 提取b数组序号为第1行、第3列的元素， 即为7
 
-.. image:: images/array/index1.gif
+.. image:: ../images/array/index1.gif
     :scale: 60 %
 
-.. image:: images/array/index2.gif
+.. image:: ../images/array/index2.gif
 
 普通切片
 ^^^^^^^^^^^^^
@@ -152,7 +152,7 @@ ________________________________________________________________________________
     b = a(:, (/0, 1, 4/))  ;提取第1列，第2列和第5列
     write_matrix(b, "6I3", False)  ; 打印b到屏幕
 
-.. image:: images/array/integer_slice.gif
+.. image:: ../images/array/integer_slice.gif
 
 ________________________________________________________________________________
 
