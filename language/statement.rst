@@ -88,7 +88,7 @@ blocks代码块语句
 
 载入共享库
 --------------
-``external `` 命令载入共享库对象。共享库被用于扩展NCL去调用C和
+``external`` 命令载入共享库对象。共享库被用于扩展NCL去调用C和
 Fortran函数或子程序。其语法是::
 
     external string_name path_name
