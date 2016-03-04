@@ -1,5 +1,6 @@
 NCL运算符与表达式
 =====================
+
 运算符或操作符指的是那些你从小就在使用的加号 :code:`+` 、减号 :code:`-` 等等。
 运算符通过对值做“操作”或“运算”来生成新的值，运算符操作的对象是 **操作数** 或
 **运算子** ，根据操作对象的数量可以将常见的运算符分为 **一元运算符** 如求反
@@ -175,10 +176,10 @@ NCL中短路求值的具体判定如下表
 ----------------
 有时，我们可能需要给一个已经赋值过的的变量再次赋值，比如循环处理某些数据，而这些
 数据的维数大小在每次循环中可能发生变化。这种情况下，我们自然而然地就会出现NCL
-异常::
+异常:
 
-    fatal:Dimension sizes of left hand side and right hand side of assignment do not match
-    fatal:["Execute.c":8573]:Execute: Error occurred at or near line 1
+.. error:: fatal:Dimension sizes of left hand side and right hand side of assignment do not match
+           fatal:["Execute.c":8573]:Execute: Error occurred at or near line 1
 
 在NCL6.1.1版以前，面对这种情况，我们需要在循环结束前使用程序 :code:`delete` 来释
 放变量。但是在NCL6.1.1版中加入重新赋值运算符，可以很好地处理这一情况。
@@ -219,4 +220,4 @@ NCL中短路求值的具体判定如下表
 ---------------
 
 
-[1]_ https://zh.wikipedia.org/wiki/%E7%9F%AD%E8%B7%AF%E6%B1%82%E5%80%BC
+.. [1] ttps://zh.wikipedia.org/wiki/%E7%9F%AD%E8%B7%AF%E6%B1%82%E5%80%BC

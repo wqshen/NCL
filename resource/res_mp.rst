@@ -3,14 +3,25 @@
 
 .. _地图源属性: http://www.ncl.ucar.edu/Document/Graphics/Resources/mp.shtml
 
-.. option:: mpAreaGroupCount
+.. _mpAreaGroupCount:
+
+.. option:: mpAreaGroupCount(MapPlot)
 
 
-.. option:: mpAreaGroupCount_MapPlot
 
+.. _mpAreaMaskingOn:
+.. option:: mpAreaMaskingOn(MapPlot)
+    这一布尔类型源属性是一个开关，用于控制区域蒙版的打开或关闭。
 
-.. option:: mpAreaMaskingOn
+    当其为 ``True`` 时，地图图形打开区域蒙版，使得在 `mpMaskAreaSpecifiers`_ 源
+    属性中指定的区域保持不被填充，因此先前绘制的图形元素在指定的区域轮廓内部
+    可见。当其为 ``False`` 时，不论是否设定 `mpMaskAreaSpecifiers`_ 的内容，也
+    没有蒙版。为了方便起见，在没有显式地设定设定 `mpAreaMaskingOn`_ 的情况下，
+    当设定 `mpMaskAreaSpecifiers`_ 时， `mpAreaMaskingOn`_ 将被自动设定为 ``True`` 。
+    
+    但使用RANGS资料集时，这一源属性将被忽略。
 
+    默认值: False
 
 .. option:: mpAreaMaskingOn_MapPlot
 
@@ -515,6 +526,7 @@
 .. option:: Angle_projection_limits
 
 
+.. _mpMaskAreaSpecifiers:
 .. option:: mpMaskAreaSpecifiers
 
 
