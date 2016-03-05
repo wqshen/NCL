@@ -8,9 +8,10 @@
 .. option:: mpAreaGroupCount(MapPlot)
 
 
-
 .. _mpAreaMaskingOn:
+
 .. option:: mpAreaMaskingOn(MapPlot)
+
     这一布尔类型源属性是一个开关，用于控制区域蒙版的打开或关闭。
 
     当其为 ``True`` 时，地图图形打开区域蒙版，使得在 `mpMaskAreaSpecifiers`_ 源
