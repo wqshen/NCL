@@ -152,6 +152,7 @@ NCL中短路求值的具体判定如下表
 变量，需要使用数据定义符 :code:`(/ /)` 将变量置于其中，此时元数据将全部丢弃。
 
 .. code::
+
     a = 1
     b = (/1, 2, 3, 4, 5/)
     a@att1 = 1
@@ -177,7 +178,8 @@ NCL中短路求值的具体判定如下表
 数据的维数大小在每次循环中可能发生变化。这种情况下，我们自然而然地就会出现NCL
 异常:
 
-.. error:: 
+.. error::
+
     fatal:Dimension sizes of left hand side and right hand side of assignment do not match
     fatal:["Execute.c":8573]:Execute: Error occurred at or near line 1
 
