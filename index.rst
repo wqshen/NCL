@@ -57,6 +57,10 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
 
 食谱
 -----------------
+.. toctree::
+   :maxdepth: 2
+
+   cookbook/named_colors
 
 库函数
 -----------------
