@@ -118,4 +118,4 @@ ________________________________________________________________________________
 
 生成的图形
 
-.. image:: images/first_map/first_map.PNG
+.. image:: ../images/first_map/first_map.PNG

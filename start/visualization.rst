@@ -49,4 +49,4 @@ NCL直接支持的数据类型有以下几种：
 
 不出意外的话，你将看到屏幕上出现了这样一个图形窗口：
 
-.. image:: images/visualization/visual_fnl.png
+.. image:: ../images/visualization/visual_fnl.png
