@@ -6,3 +6,5 @@
 .. toctree::
    :maxdepth: 1
 
+   named_colors
+
