@@ -8,5 +8,6 @@
 
    installation
    command_line_option_arguments
+   commnad_editing
    first_map
    visualization

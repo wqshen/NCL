@@ -26,6 +26,7 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
 
    start/installation
    start/command_line_option_arguments
+   start/commnad_editing
    start/first_map
    start/visualization
 
@@ -77,7 +78,7 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
 
 
 打赏
-----------------
+--------------------
 .. toctree::
    :maxdepth: 2
 
