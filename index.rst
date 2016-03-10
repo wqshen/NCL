@@ -25,6 +25,7 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
    :maxdepth: 2
 
    start/installation
+   start/command_line_option_arguments
    start/first_map
    start/visualization
 
