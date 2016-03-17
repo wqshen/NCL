@@ -16,7 +16,6 @@ import sys
 import os
 # import shlex
 import sphinx_rtd_theme
-import rst2pdf
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
