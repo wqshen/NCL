@@ -305,7 +305,7 @@
     当色条的方向为水平，其有效值为 ``Top`` （顶）， ``Center`` （中）， ``Bottom`` （底）。
     当色条的方向为垂直，其有效值为 ``Left`` （左）， ``Center`` （中）， ``Right`` （右）。
     如果对应色条方向设置，设置的不恰当，此源属性的值将会轻微改变： ``Bottom`` （底）变为 ``Left`` （左），
-     ``Top`` （顶）变为 ``Right`` （右），反之亦然。
+    ``Top`` （顶）变为 ``Right`` （右），反之亦然。
 
     When set to Center the labels are centered on, and when the auto-manage feature is on, sized to fit within, each respective label box.
     
@@ -324,7 +324,9 @@
     此源属性可能被以下对象拦截或禁用：
 
     ContourPlot (见 cnExplicitLabelBarLabelsOn)
+
     VectorPlot (见 vcExplicitLabelBarLabelsOn)
+    
     StreamlinePlot (见 stExplicitLabelBarLabelsOn)
     
     默认值: Label_<label element number>
