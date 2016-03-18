@@ -22,24 +22,24 @@ NCL预定义的选项包括：
 
 .. code::
 
-    % ncl -h
-    Usage: ncl -fhnopxQV  
-          -f: use new file structure and NetCDF4 features when possible
-          -h: print this message and exit
-          -n: don't enumerate values in print()
-          -o: retain former behavior for certain backwards-incompatible changes
-          -p: don't page output from the system() command
-          -x: echo NCL commands
-          -Q: turn off echo of NCL version and copyright info
-          -V: print NCL version and exit
+    $ ncl -h
+      Usage: ncl -fhnopxQV <args> <file.ncl>
+         -f: use new file structure and NetCDF4 features when possible
+         -h: print this message and exit
+         -n: don't enumerate values in print()
+         -o: retain former behavior for certain backwards-incompatible changes
+         -p: don't page output from the system() command
+         -x: echo NCL commands
+         -Q: turn off echo of NCL version and copyright info
+         -V: print NCL version and exit
 
 .. option:: -n
 .. code::
        
-    % ncl -n
-     Copyright (C) 1995-2014 - All Rights Reserved
+    $ ncl -n
+     Copyright (C) 1995-2015 - All Rights Reserved
      University Corporation for Atmospheric Research
-     NCAR Command Language Version 6.2.1
+     NCAR Command Language Version 6.3.0
      The use of this software is governed by a License Agreement.
      See http://www.ncl.ucar.edu/ for more details.
     ncl 0> f = addfile("T2m.nc", "r")
@@ -80,10 +80,10 @@ NCL预定义的选项包括：
 
 .. code::
       
-    % ncl -x
-     Copyright (C) 1995-2014 - All Rights Reserved
+    $ ncl -x
+     Copyright (C) 1995-2015 - All Rights Reserved
      University Corporation for Atmospheric Research
-     NCAR Command Language Version 6.2.1
+     NCAR Command Language Version 6.3.0
      The use of this software is governed by a License Agreement.
      See http://www.ncl.ucar.edu/ for more details.
     ncl 0> a = 5
@@ -94,14 +94,14 @@ NCL预定义的选项包括：
 .. option:: -Q
 .. code::
 
-    % ncl -Q
+    $ ncl -Q
     ncl 0>
 
 .. option:: -V
 .. code::
 
-    % ncl -V
-    6.2.1
+    $ ncl -V
+    6.3.0
 
 参数
 --------
@@ -112,9 +112,9 @@ NCL预定义的选项包括：
 .. code::
 
     % ncl nyrStrt=1900 nyrLast=2004
-     Copyright (C) 1995-2014 - All Rights Reserved
+     Copyright (C) 1995-2015 - All Rights Reserved
      University Corporation for Atmospheric Research
-     NCAR Command Language Version 6.2.1
+     NCAR Command Language Version 6.3.0
      The use of this software is governed by a License Agreement.
      See http://www.ncl.ucar.edu/ for more details.
     ncl 0> print(nyrStrt)
@@ -132,9 +132,9 @@ NCL预定义的选项包括：
 同时也可以给初始化变量属性，例::
 
     % ncl nyrStrt=1930 'nyrStrt@long_name="Model Run Begin Year"' 'nyrStrt@units="Years"'
-     Copyright (C) 1995-2014 - All Rights Reserved
+     Copyright (C) 1995-2015 - All Rights Reserved
      University Corporation for Atmospheric Research
-     NCAR Command Language Version 6.2.1
+     NCAR Command Language Version 6.3.0
      The use of this software is governed by a License Agreement.
      See http://www.ncl.ucar.edu/ for more details.
     ncl 0> print(nyrStrt)
