@@ -31,7 +31,7 @@
     来禁用它。
 
     在未来， `cnConstFEnableFill`_ 的默认值可能会被设定为 ``False`` , 
-    ``cnConstFLabelOn``_ 的默认值设定为 ``False`` ，除非等值线线图被启用。
+    `cnConstFLabelOn`_ 的默认值设定为 ``False`` ，除非等值线线图被启用。
 
     默认值： ``False``
 
@@ -131,28 +131,52 @@
 
     
 
+.. _cnConstFLabelFuncCode:
+
 .. option:: cnConstFLabelFuncCode
 
+
+.. _cnConstFLabelJust:
 
 .. option:: cnConstFLabelJust
 
 
+
+.. _cnConstFLabelOn:
+
 .. option:: cnConstFLabelOn
 
+
+
+.. _cnConstFLabelOrthogonalPosF:
 
 .. option:: cnConstFLabelOrthogonalPosF
 
 
+
+.. _cnConstFLabelParallelPosF:
+
 .. option:: cnConstFLabelParallelPosF
 
+
+
+.. _cnConstFLabelPerimColor:
 
 .. option:: cnConstFLabelPerimColor
 
 
+
+.. _cnConstFLabelPerimOn:
+
 .. option:: cnConstFLabelPerimOn
 
 
+
+
+.. _cnConstFLabelPerimSpaceF:
+
 .. option:: cnConstFLabelPerimSpaceF
+
 
 
 .. option:: cnConstFLabelPerimThicknessF
