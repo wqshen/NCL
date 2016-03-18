@@ -23,15 +23,38 @@
 
 .. option:: cnConstFEnableFill
 
+    *仅在* ``6.2.0`` *版及以后的版本中可用*
+
+    当布尔型源属性 `cnConstFEnableFill`_ 设定为 ``True`` （真）时，在大多数情况下，
+    常量和接近常量的场将使用区域填充呈现，而不是让等值的区域保持空白。
+    默认情况下，常量场信息文本框仍然出现；你可以将 `cnConstFLabelOn`_ 设定为 ``False``
+    来禁用它。
+
+    在未来， `cnConstFEnableFill`_ 的默认值可能会被设定为 ``False`` , 
+    ``cnConstFLabelOn``_ 的默认值设定为 ``False`` ，除非等值线线图被启用。
+
+    默认值： ``False``
+
 
 .. _cnConstFLabelAngleF:
 
 .. option:: cnConstFLabelAngleF
 
+    此源属性指定了常量场标签文本和环绕它的文本框的角度（单位为°）。
+
+    默认值： ``0.0``
+
 
 .. _cnConstFLabelBackgroundColor:
 
 .. option:: cnConstFLabelBackgroundColor
+
+    此源属性设定用于填充环绕常量场标签文本框的背景颜色。如果你不想让文本框被填充，
+    设定它 `cnConstFLabelBackgroundColor`_ 为透明（ ``-1`` ）。
+
+    你可以选择使用颜色索引值（整数）或命名颜色（字符串）来赋值本源属性。
+
+    默认值：背景色（ ``0`` ）
 
 
 .. _cnConstFLabelConstantSpacingF:
@@ -39,30 +62,74 @@
 .. option:: cnConstFLabelConstantSpacingF
 
 
+
+
 .. _cnConstFLabelFont:
 
 .. option:: cnConstFLabelFont
+
+    这一 `NhlTFont`_ 类源属性指定了绘制标量场标签文本所使用的字体。
+
+    默认值： ``"pwritx"``
 
 
 .. _cnConstFLabelFontAspectF:
 
 .. option:: cnConstFLabelFontAspectF
 
+    此源属性指定了常量场标签字符的形状。从 ``1.0`` 往上增加时，字符更瘦；从 ``1.0`` 
+    往下减时，字符更宽。设定小于等于 ``0.0`` 的值，将导致警告信息并使用默认值。
+
+    默认值： ``1.3125``
+
+
+.. _cnConstFLabelFontColor:
 
 .. option:: cnConstFLabelFontColor
 
+    此源属性指定了用于绘制常量场标签文本的颜色。
+
+    你可以选择使用颜色索引值（整数）或命名颜色（字符串）来赋值本源属性。
+
+    默认值： ``True``
+
+
+.. _cnConstFLabelFontHeightF:
 
 .. option:: cnConstFLabelFontHeightF
 
+    此源属性控制常量场标签文本字符的高度（NDC | 页面坐标）。
+    字符的宽度将按比例变化，除非你使用 `cnConstFLabelFontAspectF`_ 改变纵横比。
+    常量场标签文本高度将随着视窗宽度的变化而变化， 除非你同时显式的设定 `cnConstFLabelFontHeightF`_ 。
+
+    默认值：<dynamic> -- 视窗宽度为0.6时，其为 ``0.012``
+
+
+.. _cnConstFLabelFontQuality:
 
 .. option:: cnConstFLabelFontQuality
 
+    这一 `NhlTFontQuality`_ 类的源属性指定了用于绘制常量场标签的字体质量。
+
+    默认值： ``High``
+
+
+.. _cnConstFLabelFontThicknessF:
 
 .. option:: cnConstFLabelFontThicknessF
 
+    指定了绘制常量场标签文本字体的线的粗细。其值是依赖设备单位粗细的倍数。
+    当常量场标签字体 `cnConstFLabelFont`_ 被设定为填充字体（ 21-22, 25-26, 29-30, 33-37 ）
+    时，该源属性被忽略。
+
+    默认值： ``1.0``
+
+
+.. _cnConstFLabelFormat:
 
 .. option:: cnConstFLabelFormat
 
+    
 
 .. option:: cnConstFLabelFuncCode
 
