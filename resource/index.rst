@@ -7,7 +7,8 @@
    :maxdepth: 1
 
    res_cn
+   res_lb
    res_mp
    res_sf
    res_vc
-   res_lb
+   res_vp

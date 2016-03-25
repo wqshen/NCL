@@ -52,10 +52,11 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
    :maxdepth: 2
 
    resource/res_cn
+   resource/res_lb
    resource/res_mp
    resource/res_sf
    resource/res_vc
-   resource/res_lb
+   resource/res_vp
 
 食谱
 -----------------
