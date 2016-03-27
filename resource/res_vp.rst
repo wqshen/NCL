@@ -30,7 +30,7 @@
 .. option:: vpKeepAspect
 
     当布尔类型的源属性 `vpKeepAspect`_ 为 ``True`` 时，视图对象将保持它的初始形
-    状（宽高比）。你仍然可以更改他的大小源属性。如果你同时更改大小源属性 
+    状（宽高比）。你仍然可以更改他的大小源属性。如果你同时更改大小源属性、 ``vpWidthF`` 、 ``vpHeightF``
     While the boolean resource vpKeepAspect is True, the View object keeps its initial shape (aspect ratio); however you may modify its size resources. If you modify either or both the size resources, vpWidthF and vpHeightF, View will constrain its new bounding box to the largest box with an aspect ratio matching the original shape that can be inscribed within a box of the specified size. When vpKeepAspect is False, View places no constraints on the shape of its bounding box when you modify the size resources.
 
     默认值： False
