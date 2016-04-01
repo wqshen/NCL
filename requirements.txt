@@ -1,3 +1,3 @@
 -e git+https://github.com/snide/sphinx_rtd_theme.git@21e875d3a53ce897089ad690d897252f6063349d#egg=sphinx_rtd_theme
 -e git+https://github.com/rst2pdf/rst2pdf.git#egg=rst2pdf
--e git+https://wqshen@bitbucket.org/wqshen/pygments-main#egg=pygments
+-e git+https://wqshen@bitbucket.org/birkenfeld/pygments-main#egg=pygments
