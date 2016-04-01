@@ -16,29 +16,35 @@
 
 1 读取数据
 --------------
-NCL支持多种数据格式的直接读取，常见如 NetCDF 、GRIB 、HDF 等等。打开这些格式支持的文件非常简单，只需要使用 addfile 函数::
+NCL支持多种数据格式的直接读取，常见如 NetCDF 、GRIB 、HDF 等等。打开这些格式支持的文件非常简单，只需要使用 addfile 函数
+
+.. code:: ncl
 
     f = addfile("hgt_2009_2012_monthly.nc", "r")
 
 
-- 范例数据hgt_2009_2012_monthly.nc下载， `传送门<http://pan.baidu.com/s/1nuyQp4X>`_ ，提取码 `pb2g`
+- 范例数据hgt_2009_2012_monthly.nc下载， `传送门 <http://pan.baidu.com/s/1nuyQp4X>`_ ，提取码 `pb2g`
 - 函数将文件指针返回给文件对象f，以便进行下一步的操作。
 
-文件被打开后，可通过对文件对象的操作查看文件的基本信息和文件变量信息::
+文件被打开后，可通过对文件对象的操作查看文件的基本信息和文件变量信息
+
+.. code:: ncl
 
     print(f)
     list_filevars(f)
 
-- 打印子程序 `print<https://www.ncl.ucar.edu/Document/Functions/Built-in/print.shtml>`_ 用于文件对象时，将文件的全部信息，包括文件的基本信息、文件的全局属性、维和所有的文件变量概略到屏幕（标准输出）。
-- 子程序 `list_filevars<https://www.ncl.ucar.edu/Document/Functions/Built-in/list_filevars.shtml>`_ 仅将文件中的所有变量概略输出到屏幕。
+- 打印子程序 `print <https://www.ncl.ucar.edu/Document/Functions/Built-in/print.shtml>`_ 用于文件对象时，将文件的全部信息，包括文件的基本信息、文件的全局属性、维和所有的文件变量概略到屏幕（标准输出）。
+- 子程序 `list_filevars <https://www.ncl.ucar.edu/Document/Functions/Built-in/list_filevars.shtml>`_ 仅将文件中的所有变量概略输出到屏幕。
 
-通常打开文件就是为了读取文件变量，使用 ->; 来读取文件中的变量::
+通常打开文件就是为了读取文件变量，使用 ->; 来读取文件中的变量
+
+.. code:: ncl
 
     hgt = short2flt(f->hgt)
     printVarSummary(hgt)
 
-- 文件变量hgt使用了short打包，因此使用函数[short2flt](https://www.ncl.ucar.edu/Document/Functions/Built-in/short2flt.shtml)自动解包
-- 函数[printVarSummary](https://www.ncl.ucar.edu/Document/Functions/Built-in/printVarSummary.shtml)打印NCL变量的概略信息
+- 文件变量hgt使用了short打包，因此使用函数 `short2flt <https://www.ncl.ucar.edu/Document/Functions/Built-in/short2flt.shtml>`_ 自动解包
+- 函数 `printVarSummary <https://www.ncl.ucar.edu/Docuent/Functions/Built-in/printVarSummary.shtml>`_ 打印NCL变量的概略信息
 
 2 选取
 -------------
@@ -46,17 +52,21 @@ NCL支持多种数据格式的直接读取，常见如 NetCDF 、GRIB 、HDF 等
 
 2.1 数组下标
 ^^^^^^^^^^^^^^^
-可以使用整数来选取数组中特定位置的元素::
+可以使用整数来选取数组中特定位置的元素
+
+.. code:: ncl
 
     arr1 = ispan(1, 10, 1)
     print(arr1(4))
     print(hgt(0, 4, 1, 10))
 
-- `ispan<https://www.ncl.ucar.edu/Document/Functions/Built-in/ispan.shtml>`_ 函数生成等间隔的整数数组，这里arr1的值为 (/1,2,3,4,5,6,7,8,9,10/)
+- `ispan <https://www.ncl.ucar.edu/Document/Functions/Built-in/ispan.shtml>`_ 函数生成等间隔的整数数组，这里arr1的值为 (/1,2,3,4,5,6,7,8,9,10/)
 - arr1(4) 获取arr1数组中的第5个元素
-- hgt(0, 4, 1, 10) 获取hgt数组第<u>1</u>个时次，第<u>5</u>层，第<u>2</u>个纬度、第<u>11</u>个经度上的值
+- hgt(0, 4, 1, 10) 获取hgt数组第1个时次，第5层，第2个纬度、第11个经度上的值
 
-对某一个连续片段的选取::
+对某一个连续片段的选取
+
+.. code:: ncl
 
     print(arr1(2:4))
     print(arr1(1::2))
@@ -64,11 +74,13 @@ NCL支持多种数据格式的直接读取，常见如 NetCDF 、GRIB 、HDF 等
 
 - arr1(2:4) 选取arr1数组中第3个-第5个元素
 - arr1(1::2) 选取arr1数组中第2个-最后，每隔一个元素选取
-- hgt(:15:2, 0, 15, 29) 选取hgt数组中第<u>1</u>个时次-第<u>16</u>个时次每隔一个时次 | 第<u>1</u>层 | 第<u>16</u>个纬度 | 第<u>30</u>个经度的片段
+- hgt(:15:2, 0, 15, 29) 选取hgt数组中第1个时次-第16个时次每隔一个时次 | 第1层 | 第16个纬度 | 第30个经度的片段
 
 2.2 坐标下标
 ^^^^^^^^^^^^^^^^
-选取位势高度变量 hgt 第一个时次 | 500 hPa 气压层 | 所有经纬度 的 数据部分::
+选取位势高度变量 hgt 第一个时次 | 500 hPa 气压层 | 所有经纬度 的 数据部分
+
+.. code:: ncl
 
     hgt_500 = hgt(0, {500}, :, :)
 
@@ -78,7 +90,7 @@ NCL支持多种数据格式的直接读取，常见如 NetCDF 、GRIB 、HDF 等
 
 借助于维名称，可以实现维顺序的重新排列，二维数组的维序交换就是装置，高维数组的维序变化较难用语言解释下句选取数组hgt的第1个时次 | 500-700hPa | 90-120°E | 所有纬度 的部分数据
 
-.. code::
+.. code:: ncl
 
     hgt_500_0 = hgt(time| 0, {level| 500:700}, {lon| 90:120}, lat| :)
 
@@ -89,7 +101,9 @@ NCL支持多种数据格式的直接读取，常见如 NetCDF 、GRIB 、HDF 等
 ^^^^^^^^^^^^^^^^^^^
 使用切片语法只能选取连续的数组片段，不连续的数组片段需要使用整数数组进行选取
 
-下例选取add1数组中第2个、第4个、第5个、第6个、第8个、第9个元素组成的新数组::
+下例选取add1数组中第2个、第4个、第5个、第6个、第8个、第9个元素组成的新数组
+
+.. code:: ncl
 
     idx = (/1,3,4,5,7,8/)
     print(arr1(idx))
@@ -101,7 +115,7 @@ NCL支持多种数据格式的直接读取，常见如 NetCDF 、GRIB 、HDF 等
 如果要获取变量中满足一定条件的值的位置怎么办？这时候需要使用条件索引技巧
 使用 ind 函数返回一维数组中满足条件的元素的位置
 
-.. code::
+.. code:: ncl
 
     a = (/1, 2, 3, 4, 5, 5, 4, 3, 2, 1, 1, 2, 3, 4, 5/) ; 定义一维数组
     a@_FillValue = 5 ; 将5设置为缺测
@@ -122,7 +136,7 @@ NCL支持多种数据格式的直接读取，常见如 NetCDF 、GRIB 、HDF 等
 3.1 转置
 ^^^^^^^^^
 
-.. code::
+.. code:: ncl
 
     arr2 = (/(/1, 2, 3, 4/), (/5, 6, 7, 8/)/)
     arr3 = transpose(arr2)
@@ -134,7 +148,7 @@ NCL支持多种数据格式的直接读取，常见如 NetCDF 、GRIB 、HDF 等
 NCL强类型语言的性质决定了变量的扩展实际上是一个新变量的建立
 在数组 arr1 后新添两个元素 11 和 12
 
-.. code::
+.. code:: ncl
 
     arr1 := array_append_record(arr1, (/11, 12/), 0)
 
@@ -144,7 +158,7 @@ NCL强类型语言的性质决定了变量的扩展实际上是一个新变量�
 
 将第二个数组与第一个数组按行连结
 
-.. code::
+.. code:: ncl
 
     x1 = (/(/-3.71, -3.70, -3.03/),\
            (/-1.72, -3.70, -3.64/),\
@@ -168,7 +182,7 @@ NCL强类型语言的性质决定了变量的扩展实际上是一个新变量�
 
 将第二个数组与第一个数组按列连结
 
-.. code::
+.. code:: ncl
 
     y1 = (/(/-3.04, -2.05, -4.29/),\
            (/-2.07, -3.66, -1.46/),\
@@ -199,7 +213,7 @@ NCL强类型语言的性质决定了变量的扩展实际上是一个新变量�
 
 将包含12个元素的一维数组arr1扩展到多维（4行12列）
 
-.. code::
+.. code:: ncl
 
     arr4 = onedtond(arr1, (/4,12/))
     write_matrix (arr4, "12I3", False)
@@ -216,14 +230,14 @@ NCL强类型语言的性质决定了变量的扩展实际上是一个新变量�
 假定数组q的维数 为 nt x ny x nx x nz ，而数组dz 为一维数组，长度为nz
 按 q 的第3为扩展 dz 到 q 的大小
 
-.. code::
+.. code:: ncl
 
     dzConform = conform(q, dz, 3)
 
 3.3 变形
 ^^^^^^^^^
 
-.. code::
+.. code:: ncl
 
     arr5 = reshape(arr1, (/2, 6/))
     arr6 = reshape(arr5, (/3, 4/))
@@ -235,7 +249,7 @@ NCL强类型语言的性质决定了变量的扩展实际上是一个新变量�
 ^^^^^^^^^^^^
 顾名思义就是将不需要的东西给盖住，在程序中就是置为缺测
 
-.. code::
+.. code:: ncl
 
     x = ispan(-10, 10, 1)
     x = mask(x, x.lt.0, True)
@@ -245,7 +259,7 @@ NCL强类型语言的性质决定了变量的扩展实际上是一个新变量�
 
 下例中读取温度变量TS和下垫面标识变量ORO，并用下垫面标识来做海洋或陆地的蒙版
 
-.. code::
+.. code:: ncl
 
     begin
         f = addfile("ts_oro.nc", "r") ; 打开文件
@@ -267,7 +281,7 @@ NCL强类型语言的性质决定了变量的扩展实际上是一个新变量�
 条件操作值得是对数组中满足条件的值和不满足条件的分别进行的操作，功能非常强大
 大多数情况下，可取代繁琐的循环结构，Fortran循环重度用户需要认真学习
 
-.. code::
+.. code:: ncl
 
     arr6 = ispan(-6, 6, 1)
     arr6 = where(arr6.lt.0, arr6+256, arr6*2) ; 将小于0的值加上256, 大于等于0的值做平方
@@ -294,7 +308,7 @@ NCL中标量运算和数组运算是一致的
 
 +(加) | - (减) | * (乘) | / (除) | % (取模) | ^ (幂)
 
-.. code::
+.. code:: ncl
 
     a = 2.2 ; 浮点型变量a, 赋值为 2.2
     b = 5 ; 整型变量b, 赋值 5
@@ -326,13 +340,13 @@ NCL中标量运算和数组运算是一致的
 ^^^^^^^^^^
 对变量求整体的平均avg
 
-.. code::
+.. code:: ncl
 
     print(avg(arr7))
 
 指定维的平均 dim_avg | dim_avg_n |dim_avg_n_Wrap
 
-.. code::
+.. code:: ncl
 
     print(dim_avg(hgt)) ; 最右边维的平均
     print(dim_avg_n(hgt, 0)) ; 指定维的平均
@@ -342,7 +356,7 @@ NCL中标量运算和数组运算是一致的
 ^^^^^^^^^^^^^^^^^^
 子程序 printMinMax 可以输出一个变量的最大值和最小值
 
-.. code::
+.. code:: ncl
 
     printMinMax(hgt)
 
@@ -359,7 +373,7 @@ NCL中标量运算和数组运算是一致的
 
 函数 max |dim_max|dim_max_n|dim_max_n_Wrap可以获取整体最大值、最右维最大值、指定维最大值、保留元数据
 
-.. code::
+.. code:: ncl
 
     print(max(hgt)) ; hgt的最大值
     print(dim_max(hgt)) ; 最右边维的最大值
@@ -368,7 +382,7 @@ NCL中标量运算和数组运算是一致的
 
 函数minind|maxind可以获取一维数组最小值|最大值所在的索引位置
 
-.. code::
+.. code:: ncl
 
     arr9 = (/9, 3, 2, 5, 2, 1, 4, 8, 1, 9/)
     print(minind(arr9)) ; 5
@@ -396,7 +410,7 @@ NCL中标量运算和数组运算是一致的
 
 下载文本数据（2010年Megi台风, 提取码：x76w）
 
-.. code::
+.. code:: ncl
 
     load "cd_inv_string.ncl" ; 将下载的文件置于当前目录后，载入到命名空间
     begin
@@ -437,7 +451,7 @@ NCL中标量运算和数组运算是一致的
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 将NCL日期时间转换为格式化字符串是与字符串解析执行相反的操作，使用函数 cd_string 来进行，通常的应用场景有时间刻度标签、气候时间序列选取
 
-.. code::
+.. code:: ncl
 
     load "$NCARG_ROOT/lib/ncarg/nclscripts/contrib/cd_string.ncl"
     print(cd_string(hgt&amp;time(:10), "%Y-%N-%D %H:%M:%S")) ; (/"2009-01-01 00:00:00", .../)
@@ -456,7 +470,7 @@ NCL中标量运算和数组运算是一致的
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 将NCL中的时间变量转换到世界时，以便于下一步的计算或查看，使用cd_calendar
 
-.. code::
+.. code:: ncl
 
     time = (/17522904, 17522928, 17522952, 17522976, 17523000/) ; 时间
     time@units = "hours since 1-1-1 00:00:0.0" ; 设定时间单位
@@ -490,7 +504,7 @@ NCL中标量运算和数组运算是一致的
 7.1 折线图
 ^^^^^^^^^^^^^^^^^
 
-.. code::
+.. code:: ncl
 
     begin ;开始代码块
         wks = gsn_open_wks ("png","xy") ; 将图形发送到xy.png文件中
@@ -503,7 +517,7 @@ NCL中标量运算和数组运算是一致的
 
 ## 7.2 等值线图
 
-.. code::
+.. code:: ncl
 
     begin
         wks = gsn_open_wks("ps","ce") ; 将图形写入ce.ps文件
@@ -527,7 +541,7 @@ NCL中标量运算和数组运算是一致的
 由于NCL数据结构基于NetCDF定制，因此在NCL中将变量输出到NetCDF文件无疑是最明智的选择。
 最简单的输出方式
 
-.. code::
+.. code:: ncl
 
     fout = addfile("hgt_annually.nc", "c")
     fout->hgt = hgt_avg
@@ -538,7 +552,7 @@ NCL中标量运算和数组运算是一致的
 ## 8.2 输出到文本文件
 输入到文本文件
 
-.. code::
+.. code:: ncl
 
     npts = 100
     i = ispan(1,npts,1)
