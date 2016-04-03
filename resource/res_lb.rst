@@ -3,6 +3,8 @@
 
 .. _色条源属性: http://www.ncl.ucar.edu/Document/Graphics/Resources/lb.shtml
 
+.. _lbAutoManage:
+
 .. option:: lbAutoManage
 
     The lbAutoManage switch determines how LabelBar operates; when True, LabelBar manages the sizing of the title and the label text. The title is always sized to fit within the currently set boundaries of the LabelBar given any text angle, aspect ratio, etc. The labels also are sized to fit within the current boundary. Additionally, the sizing of the labels is managed so that under any rotation, the labels will not overlap. Also the label justification is managed such that, given any rotation, the end of the label string aligns with the correct LabelBar box. When off, you may directly size the labels and text as you please. However, under rotation, the justification of the labels does not change, and, although the text is moved out of the way of the LabelBar boxes, it will not necessarily line up correctly. In practice, when working interactively, a good method is to create a basic LabelBar layout close to the desired size with the lbAutoManage mode on, then switch it off to tune the text size precisely to your taste.
@@ -10,11 +12,15 @@
 
     默认值: True
 
+.. _lbBottomMarginF:
+
 .. option:: lbBottomMarginF
 
     Defines an offset, specified as a fraction of whichever LabelBar axis is smallest, between the bottommost LabelBar element and the bottom edge of the LabelBar perimeter. It is always subtracted from the current LabelBar extent. Negative values are allowed.
 
     默认值: 0.05
+
+.. _lbBoxCount:
 
 .. option:: lbBoxCount
 
@@ -26,6 +32,8 @@
     StreamlinePlot
 
     默认值: 16
+
+.. _lbBoxEndCapStyle:
 
 .. option:: lbBoxEndCapStyle
 
@@ -39,11 +47,15 @@
 
     NOTE: this resource should be ignored if the contour resource cnLabelBarEndStyle is set to "ExcludeOuterBoxes".
 
+.. _lbBoxFractions:
+
 .. option:: lbBoxFractions
 
     An array that specifies sizing of each box in the LabelBar when the box sizing mode is set to ExplicitSizing. There must be one more element in this array than the number of items specified by the resource lbBoxCount. Each element of the array must eventually contain a number in the range 0.0 to 1.0, with succeeding elements increasing monotonically. The first element must be 0.0 and the last 1.0. If invalid values are discovered when the array is checked, it is not considered an error. Instead, the code simply supplies linearly interpolated values for all adjacent elements containing out- of-bounds elements. The interpolation is performed relative to the two closest bounding elements containing valid values, or 0.0 or 1.0 respectively if the first or last element contains invalid data. The values thus obtained represent the beginnings and endings of the LabelBar boxes.
 
     默认值: NULL
+
+.. _lbBoxLineColor:
 
 .. option:: lbBoxLineColor
 
@@ -51,11 +63,15 @@
 
     默认值: Foreground
 
+.. _lbBoxLineDashPattern:
+
 .. option:: lbBoxLineDashPattern
 
     The hlu index of the dash pattern used for the lines around the boxes of the LabelBar.
 
     默认值: 0
+
+.. _lbBoxLineDashSegLenF:
 
 .. option:: lbBoxLineDashSegLenF
 
@@ -63,23 +79,31 @@
 
     默认值: 0.15
 
+.. _lbBoxLineThicknessF:
+
 .. option:: lbBoxLineThicknessF
 
-    Determines the thickness of the lines used around the boxes.
+    确定环绕色条框的线的粗细。
     
     默认值: 1.0
 
+.. _lbBoxLinesOn:
+
 .. option:: lbBoxLinesOn
 
-    A boolean flag determining whether lines should appear around the boxes in the LabelBar.
+    布尔型标记，用于控制环绕色条框的线条是否出现。
     
     默认值: True
+
+.. _lbBoxMajorExtentF:
 
 .. option:: lbBoxMajorExtentF
 
     Determines the amount of the area allotted to each box of the LabelBar in the direction of lbOrientation is actually occupied by the box. When set to 1.0, the boxes touch each other. If set to 0.0, the boxes disappear entirely. Intermediate values create separated boxes.
     
     默认值: 1.0
+
+.. _lbBoxMinorExtentF:
 
 .. option:: lbBoxMinorExtentF
 
@@ -88,6 +112,8 @@
 
     默认值: 0.33
 
+.. _lbBoxSeparatorLinesOn:
+
 .. option:: lbBoxSeparatorLinesOn
 
     Available in version 6.2.0 and later.
@@ -95,17 +121,23 @@
 
     默认值: True
 
+.. _lbBoxSizing:
+
 .. option:: lbBoxSizing
 
     When set to UniformSizing, all the boxes in the LabelBar have the same size. When set to ExplicitSizing, the values in the array, lbBoxFractions, determine the relative size of each box along the major axis (the axis of orientation).
     
     默认值: UniformSizing
 
+.. _lbFillBackground:
+
 .. option:: lbFillBackground
 
     The color index used for the background of all the boxes in the LabelBar. By default it is set to Transparent (-1), specifying that the background of the boxes is transparent to whatever it overlays. Note that the box background is only observable when the fill pattern is not solid. This resource also applies to the background of the fill pattern set with the lbPerimFill resource.
     
     默认值: Transparent
+
+.. _lbFillColor:
 
 .. option:: lbFillColor
 
@@ -118,6 +150,8 @@
     
     默认值: Foreground
 
+.. _lbFillColors:
+
 .. option:: lbFillColors
 
     This array resource of type NhlTColorIndexGenArray individually sets the color of each box in the LabelBar when lbMonoFillColor is set False. The LabelBar ensures that this array contains at least as many elements as the current value of lbBoxCount. You may cause a box to appear empty by setting the appropriate array element to the value Transparent.
@@ -129,17 +163,23 @@
     
     默认值: By default, each box is assigned to the next succeeding color in the hlu color table, up to the number of defined colors. Additional boxes are assigned the current value of wkForegroundColor.
 
+.. _lbFillDotSizeF:
+
 .. option:: lbFillDotSizeF
 
     This resource sets a uniform dot size, in NDC units, for the stipple dot fill pattern. The default value of 0.0 causes the dots to be drawn as before, using a workstation dependent minimum dot size. A caveat is that individual dots are not clipped around the edges of fill areas; this becomes more noticeable as the dot size increases.
     
     默认值: 0.0
 
+.. _lbFillLineThicknessF:
+
 .. option:: lbFillLineThicknessF
 
     The line thickness used for the lines that comprise the fill pattern within the label boxes.
     
     默认值: 1.0
+
+.. _lbFillPattern:
 
 .. option:: lbFillPattern
 
@@ -152,6 +192,8 @@
     
     默认值: SolidFill
 
+.. _lbFillPatterns:
+
 .. option:: lbFillPatterns
 
     This array resource of type NhlTFillIndexGenArray individually sets the fill pattern of each box in the LabelBar when lbMonoFillPattern is set False. The LabelBar ensures that this array contains at least as many elements as the current value of lbBoxCount. You can cause any box to appear empty by setting the appropriate array element to the value HollowFill (-1). Note that you can use the scalar resource lbFillBackground to set a uniform solid-fill background color the fill patterns.
@@ -162,6 +204,8 @@
     StreamlinePlot
     
     默认值: All array elements above those specified by the user are assigned values according to the formula: element_index MOD wkFillTableLength + 1.
+
+.. _lbFillScaleF:
 
 .. option:: lbFillScaleF
 
@@ -174,6 +218,8 @@
     
     默认值: 1.0
 
+.. _lbFillScales:
+
 .. option:: lbFillScales
 
     When lbMonoFillScale is False, each element of this array resource contains an individual scale value that is applied to the pattern assigned to the corresponding box in the LabelBar. When the scale value is 1.0, all lines in the currently defined patterns are nominally spaced at about 0.01 NDC units. The scale value is applied as a factor to this spacing.
@@ -185,6 +231,8 @@
     
     默认值: 1.0 for all elements
 
+.. _lbJustification:
+
 .. option:: lbJustification
 
     When the labelbar changes size, the justification determines a fixed point about which the size change occurs. Any of the corners, the center of any edge, or the current center of the LabelBar may be set to the fixed justification point.
@@ -193,6 +241,8 @@
     PlotManager
     
     默认值: BottomLeft
+
+.. _lbLabelAlignment:
 
 .. option:: lbLabelAlignment
 
@@ -205,11 +255,15 @@
     
     默认值: BoxCenters (InteriorEdges in gsn_xxxx_xxx scripts)
 
+.. _lbLabelAngleF:
+
 .. option:: lbLabelAngleF
 
     The angle of the text of the labels. When the auto-manage resource is turned on, both the size and justification mode of the label text may change in response to changes of the label angle.
     
     默认值: 0.0
+
+.. _lbLabelAutoStride:
 
 .. option:: lbLabelAutoStride
 
@@ -220,6 +274,8 @@
 
     默认值: False (will default to True in V6.1.0 and later)
 
+.. _lbLabelBarOn:
+
 .. option:: lbLabelBarOn
 
     用于确定色条是否出现的布尔型标记。
@@ -229,11 +285,15 @@
     
     默认值: True
 
+.. _lbLabelConstantSpacingF:
+
 .. option:: lbLabelConstantSpacingF
 
     Normally when lbLabelFontQuality is set to High, theLabelBar writes line label text with proportional spacing. Setting the lbLabelConstantSpacingF to a value greater than 0.0 overrides this behavior and instead begins each character a distance of lbLabelConstantSpacingF times the nominal character size from the beginning of the previous character. This implies that values between 0.0 and 1.0 will cause the characters to overlap each other, while a value of 1.0 implies no space between two nominally sized characters. This parameter is ignored when lbLabelFontQuality is not Low or Medium. Values less than 0.0 result in an error and are replaced with the default value.
     
     默认值: 0.0
+
+.. _lbLabelDirection:
 
 .. option:: lbLabelDirection
 
@@ -241,11 +301,15 @@
     
     默认值: Across
 
+.. _lbLabelFont:
+
 .. option:: lbLabelFont
 
     This resource of type NhlTFont specifies the font used to render the LabelBar labels.
     
     默认值: "pwritx"
+
+.. _lbLabelFontAspectF:
 
 .. option:: lbLabelFontAspectF
 
@@ -253,11 +317,15 @@
     
     默认值: 1.0
 
+.. _lbLabelFontColor:
+
 .. option:: lbLabelFontColor
 
     The hlu color index used for drawing the label text.
     
     默认值: Foreground
+
+.. _lbLabelFontHeightF:
 
 .. option:: lbLabelFontHeightF
 
@@ -265,11 +333,15 @@
     
     默认值: 0.02
 
+.. _lbLabelFontQuality:
+
 .. option:: lbLabelFontQuality
 
     确定绘制色条标签文本的字体质量。
 
     默认值: High （高）
+
+.. _lbLabelFontThicknessF:
 
 .. option:: lbLabelFontThicknessF
 
@@ -278,6 +350,8 @@
     该源属性被忽略。
     
     默认值: 1.0 （1.0倍）
+
+.. _lbLabelFuncCode:
 
 .. option:: lbLabelFuncCode
 
@@ -290,6 +364,8 @@
     
     默认值: :
 
+.. _lbLabelJust:
+
 .. option:: lbLabelJust
 
     指定色条标签文本的对齐方式。当自动管理特征开启时，为响应色条标签文本的角度变化，对齐方式可能会内在地改变。
@@ -297,11 +373,15 @@
     
     默认值: CenterCenter （上下居中，左右居中）
 
+.. _lbLabelOffsetF:
+
 .. option:: lbLabelOffsetF
 
     Defines an offset, specified as a fraction of the length of the minor labelbar axis (perpendicular to the axis of orientation), between the LabelBar boxes and the labels.
     
     默认值: 0.1
+
+.. _lbLabelPosition:
 
 .. option:: lbLabelPosition
 
@@ -315,12 +395,16 @@
     
     默认值:  ``Right`` （右）
 
+.. _lbLabelStride:
+
 .. option:: lbLabelStride
 
     控制色条上的标记（labels）的间隔（步长）。如设置为2时，色调标记将每隔一个色块
     画一个。
     
     默认值: ``1``
+
+.. _lbLabelStrings:
 
 .. option:: lbLabelStrings
 
@@ -335,11 +419,15 @@
     
     默认值: Label_<label element number>
 
+.. _lbLabelsOn:
+
 .. option:: lbLabelsOn
 
     布尔类型的标记，用于控制是否将标记（labels）显示在色条下
     
     默认值: True
+
+.. _lbLeftMarginF:
 
 .. option:: lbLeftMarginF
 
@@ -347,16 +435,23 @@
     
     默认值: ``0.05``
 
+.. _lbMaxLabelLenF:
+
 .. option:: lbMaxLabelLenF
+
     This read-only resource returns the maximum length in NDC of the strings used as LabelBar labels.
     
     默认值: <dynamic>
+
+.. _lbMinLabelSpacingF:
 
 .. option:: lbMinLabelSpacingF
 
     This read-only resource returns the minimum distance in NDC from the start of one label string to the start of the next label string.
     
     默认值: <dynamic>
+
+.. _lbMonoFillColor:
 
 .. option:: lbMonoFillColor
 
@@ -369,6 +464,8 @@
     
     默认值: False
 
+.. _lbMonoFillPattern:
+
 .. option:: lbMonoFillPattern
 
     When set True, all the boxes in the labelbar are set to a single pattern, as specified by the value of the scalar resource lbFillPattern.
@@ -379,6 +476,8 @@
     StreamlinePlot
     
     默认值: False
+
+.. _lbMonoFillScale:
 
 .. option:: lbMonoFillScale
 
@@ -391,6 +490,8 @@
     
     默认值: True
 
+.. _lbOrientation:
+
 .. option:: lbOrientation
 
     This resource of type NhlTOrientation specifies whether the labelbar boxes are arranged horizontally in a row or vertically in a column. The major axis of the LabelBar instance is parallel to the orientation and the minor axis is perpendicular to the orientation.
@@ -400,11 +501,15 @@
     
     默认值: Vertical
 
+.. _lbPerimColor:
+
 .. option:: lbPerimColor
 
     The hlu index of the color used for the line around the perimeter of LabelBar.
     
     默认值: Foreground
+
+.. _lbPerimDashPattern:
 
 .. option:: lbPerimDashPattern
 
@@ -412,11 +517,17 @@
     
     默认值: 0, specifying a solid line
 
+
+.. _lbPerimDashSegLenF:
+
 .. option:: lbPerimDashSegLenF
 
     The length in NDC units of the dash pattern used to draw the perimeter of the LabelBar.
     
     默认值: 0.15
+
+
+.. _lbPerimFill:
 
 .. option:: lbPerimFill
 
@@ -424,11 +535,17 @@
     
     默认值: HollowFill
 
+
+.. _lbPerimFillColor:
+
 .. option:: lbPerimFillColor
 
     The hlu index of the color used to fill the background of the Legend area. Only has an effect when the lbPerimFill has a value greater than HollowFill (-1).
 
     默认值: Background
+
+
+.. _lbPerimOn:
 
 .. option:: lbPerimOn
 
@@ -436,11 +553,16 @@
 
     默认值: True
 
+.. _lbPerimThicknessF:
+
 .. option:: lbPerimThicknessF
 
     Specifies the thickness of the line used to draw the perimeter of the LabelBar.
 
     默认值: 1.0
+
+
+.. _lbRasterFillOn:
 
 .. option:: lbRasterFillOn
 
@@ -449,11 +571,16 @@
 
     默认值: False
 
+
+.. _lbRightMarginF:
+
 .. option:: lbRightMarginF
 
     Defines an offset, specified as a fraction of whichever LabelBar axis is smallest, between the rightmost LabelBar element and the right edge of the LabelBar perimeter. It is always subtracted from the current LabelBar extent. Negative values are allowed.
     
     默认值: 0.05
+
+.. _lbTitleAngleF:
 
 .. option:: lbTitleAngleF
 
@@ -461,17 +588,26 @@
     
     默认值: 0.0
 
+
+.. _lbTitleConstantSpacingF:
+
 .. option:: lbTitleConstantSpacingF
 
     Determines a constant amount of extra space that is placed between each character of the title text. Values less than 0.0 result in an error and are replaced with the default value.
     
     默认值: 0.0
 
+
+.. _lbTitleDirection:
+
 .. option:: lbTitleDirection
 
     This resource of type NhlTTextDirection specifies the direction of the title text. When the title position, as set by the resource lbTitlePosition, is Top or Bottom the direction is set by default to Across. When title position is Left or Right the text is set by default to Down.
     
     默认值: Across
+
+
+.. _lbTitleExtentF:
 
 .. option:: lbTitleExtentF
 
@@ -480,11 +616,17 @@
 
     默认值: 0.15
 
+
+.. _lbTitleFont:
+
 .. option:: lbTitleFont
 
     This resource of type NhlTFont specifies the font used to render the LabelBar title.
     
     默认值: "pwritx"
+
+
+.. _lbTitleFontAspectF:
 
 .. option:: lbTitleFontAspectF
 
@@ -492,11 +634,17 @@
     
     默认值: 1.0
 
+
+.. _lbTitleFontColor:
+
 .. option:: lbTitleFontColor
 
     The hlu index of the color used for the title text.
     
     默认值: Foreground
+
+
+.. _lbTitleFontHeightF:
 
 .. option:: lbTitleFontHeightF
 
@@ -505,11 +653,17 @@
 
     默认值: 0.025
 
+
+.. _lbTitleFontQuality:
+
 .. option:: lbTitleFontQuality
 
     Determines the text quality used to draw the title text.
     
     默认值: High
+
+
+.. _lbTitleFontThicknessF:
 
 .. option:: lbTitleFontThicknessF
 
@@ -517,11 +671,17 @@
     
     默认值: 1.0
 
+
+.. _lbTitleFuncCode:
+
 .. option:: lbTitleFuncCode
 
     Determines the function code character used when parsing the label string.
     
     默认值: :
+
+
+.. _lbTitleJust:
 
 .. option:: lbTitleJust
 
@@ -529,11 +689,16 @@
     
     默认值: CenterCenter
 
+
+.. _lbTitleOffsetF:
+
 .. option:: lbTitleOffsetF
 
     This resource defines an offset specified as a fraction of the length of the axis (minus the margins) perpendicular to the side specified by lbTitlePosition. This offset separates the title extent, as specified by lbTitleExtentF, from the other elements of the LabelBar.
     
     默认值: 0.03
+
+.. _lbTitleOn:
 
 .. option:: lbTitleOn
 
@@ -541,17 +706,24 @@
     
     默认值: True
 
+
+.. _lbTitlePosition:
+
 .. option:: lbTitlePosition
 
     This resource of type NhlTPosition determines the position of the title with respect to the other elements of the LabelBar. Valid positions are Top, Bottom, Left, and Right. When you set the title position, LabelBar automatically adjusts the title direction, unless you explicitly set lbTitleDirectionin the same call. When you set the position to Top or Bottom, the title direction is set to Across; when the position is set to Left or Right, the title direction is set to Down.
     
     默认值: Top
 
+.. _lbTitleString:
+
 .. option:: lbTitleString
 
     A string containing the text used for the LabelBar title. If lbTitleString is set when the LabelBar object created, the boolean resource lbTitleOn defaults to True, causing the title to appear. Otherwise it defaults to False. If you explicitly set lbTitleOn True without setting lbTitleString, LabelBar supplies a title consisting of the name of the current instantiation of the object.
     
     默认值: <dynamic>
+
+.. _lbTopMarginF:
 
 .. option:: lbTopMarginF
 
