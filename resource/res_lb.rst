@@ -222,10 +222,10 @@
 
 .. option:: lbLabelBarOn
 
+    用于确定色条是否出现的布尔型标记。
     A boolean flag that determines whether the LabelBar should appear. Primarily useful as a forwarded resource when the LabelBar is a child of a higher level object.
-    This resource may be intercepted or disabled by:
 
-    PlotManager
+    该源属性可被 ``PlotManager`` 对象捕获或禁用
     
     默认值: True
 
@@ -267,14 +267,17 @@
 
 .. option:: lbLabelFontQuality
 
-    Determines the text quality used to draw the label text.
-    默认值: High
+    确定绘制色条标签文本的字体质量。
+
+    默认值: High （高）
 
 .. option:: lbLabelFontThicknessF
 
-    Sets the thickness of the line used to draw the Label text. The value acts as a multiplier of a (device-dependent) unit thickness. This resource is ignored when the lbLabelFont specifies a filled font (font indexes 21-22, 25-26, 29-30, and 33-37).
+    设定用来绘制色条标签文本线的粗细。它的值为一个单位粗细（依赖设备）的倍数。
+    当色条标签字体源属性 `lbLabelFont`_ 设为填充字体（字体索引号 21-22， 25-26, 29-30, 33-37）时，
+    该源属性被忽略。
     
-    默认值: 1.0
+    默认值: 1.0 （1.0倍）
 
 .. option:: lbLabelFuncCode
 
@@ -289,9 +292,10 @@
 
 .. option:: lbLabelJust
 
-    The justification of the label text. When the auto-manage feature is on, the justification may be changed internally in response to changes in the label angle. Therefore in order to control the label justification explicitly, you must first turn off the auto-manage feature.
+    指定色条标签文本的对齐方式。当自动管理特征开启时，为响应色条标签文本的角度变化，对齐方式可能会内在地改变。
+    因此，为了显式地控制色条标签文本对齐方式，你应该首先关闭自动管理特征。
     
-    默认值: CenterCenter
+    默认值: CenterCenter （上下居中，左右居中）
 
 .. option:: lbLabelOffsetF
 
