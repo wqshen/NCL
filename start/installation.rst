@@ -15,9 +15,26 @@ Linux
 
     cat /proc/version
 
+例如在我的平台上，可以看到输出
+
+.. code::
+
+    Linux version 2.6.32-279.el6.x86_64 (mockbuild@c6b9.bsys.dev.centos.org)
+    *(gcc version 4.4.6 20120305 (Red Hat 4.4.6-4) (GCC) )*
+    #1 SMP Fri Jun 22 12:19:21 UTC 2012
+
+即gcc版本为 **4.4.6**， 系统为 **Red Hat**
+
+
 2. *下载对应的预编译包*
 
     `https://www.earthsystemgrid.org/dataset/ncl.630.html <https://www.earthsystemgrid.org/dataset/ncl.630.html>`_
+
+    通常我们选择not OpeNDAP-enabled版本，即 `NCL Version 6.3.0 precompiled binaries, not OPeNDAP-enabled <https://www.earthsystemgrid.org/dataset/ncl.630.1.html>`_
+
+    点击Download Options后进入到下载界面 `Download Individual Files <https://www.earthsystemgrid.org/browse/viewCollectionFilesInitial.html?datasetId=0b490558-cd9a-11e4-bb80-00c0f03d5b7c>`_
+
+    因为我的系统为 Red Hat, 选择文件名包含REHL（Red Hat Enterprise Linux）和gcc412的安装包下载并上传至服务器
 
 3. *在你希望的安装目录中解压*
 
@@ -33,14 +50,6 @@ Linux
     export PATH=$NCARG_ROOT/bin:$PATH
 
 .. note:: 当你的Linux平台上有一个较高版本的gcc时，你可以下载NCL预编译包中的较低gcc版本编译包。通常它们具有向后的兼容性。
-
-- **Ubuntu上通过apt-get安装**
-
-Ubuntu将NCL加入了其代码仓库，因此安装NCL将变得异常方便，你只需要下面这行代码
-
-.. code:: bash
-
-    sudo apt-get install ncl-ncarg
 
 _________
 
