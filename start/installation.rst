@@ -28,13 +28,13 @@ Linux
 
 2. *下载对应的预编译包*
 
-进入6.3.0版本的下载界面 `NCL Version 6.3.0 <https://www.earthsystemgrid.org/dataset/ncl.630.html>`_ ，在页面底部可以发现有三种安装版本可以选择::
+进入6.3.0版本的下载界面 `NCL Version 6.3.0 <https://www.earthsystemgrid.org/dataset/ncl.630.html>`_ ，在页面底部可以发现有三种安装版本可以选择:
 
-    预编译版本，支持OpeNDAP `NCL Version 6.3.0 precompiled binaries, OPeNDAP-enabled <https://www.earthsystemgrid.org/dataset/ncl.630.0.html>`_
+- 预编译版本，支持OpeNDAP `NCL Version 6.3.0 precompiled binaries, OPeNDAP-enabled <https://www.earthsystemgrid.org/dataset/ncl.630.0.html>`_
 
-    预编译版本，不支持OpeNDAP `NCL Version 6.3.0 precompiled binaries, not OPeNDAP-enabled <https://www.earthsystemgrid.org/dataset/ncl.630.1.html>`_
+- 预编译版本，不支持OpeNDAP `NCL Version 6.3.0 precompiled binaries, not OPeNDAP-enabled <https://www.earthsystemgrid.org/dataset/ncl.630.1.html>`_
 
-    源代码版本 `NCL Version 6.3.0 source code <https://www.earthsystemgrid.org/dataset/ncl.630.2.html>`_
+- 源代码版本 `NCL Version 6.3.0 source code <https://www.earthsystemgrid.org/dataset/ncl.630.2.html>`_
 
 基本上我们选择预编译版本，预编译指的是NCL官方已经根据相应的平台编译好，你只需要
 解压就算安装成功了，源代码则需要自己手动编译，过程之复杂非一般小白所能承受，主要
@@ -47,7 +47,11 @@ OpeNDAP主要是用于访问网络数据库，一些国外机构使用OpeNDAP来
 
 点击Download Options后进入到下载界面 `Download Individual Files <https://www.earthsystemgrid.org/browse/viewCollectionFilesInitial.html?datasetId=e9035f26-cd99-11e4-bb80-00c0f03d5b7c>`_
 
-因为我的系统为 Red Hat, 选择文件名包含REHL（Red Hat Enterprise Linux）和gcc412的安装包下载并上传至服务器
+因为我的系统为 Red Hat, 选择文件名包含REHL（Red Hat Enterprise Linux）和gcc412的
+安装包 ncl_​ncarg-​6.​3.​0.​Linux_​RHEL5.​11_​x86_​64_​gcc412.​tar.​gz 
+下载并上传至服务器
+
+
 
 .. note:: 当你的Linux平台上有一个较高版本的gcc时，你可以下载NCL预编译包中的较低gcc版本编译包。通常它们具有向后的兼容性。
 
