@@ -42,6 +42,8 @@ Ubuntu将NCL加入了其代码仓库，因此安装NCL将变得异常方便，�
 
     sudo apt-get install ncl-ncarg
 
+.. note:: 并不建议用这种方式，因为很容易出现各种“版本不匹配”一类的错误。
+
 _________
 
 Windows
@@ -62,4 +64,20 @@ _________
 
 Mac OS
 -----------
-暂略，等我有个Mac Book再说。
+由于Mac OS有自己奇葩的编译器系统，因此首先，你需要安装Xcode，幸好现在免费了...
+然后搜索安装command line tool，当然假如你是早就已经在Mac上coding的话，这两步可以跳过。然后，
+
+1.你需要安装XQuartz，这样才能在Mac上以X11的形式查看图片。
+
+2.在Mac上安装gcc和gfortran，虽然NCL的运行不一定需要它俩，但是有的时候`*.ncl`是需要它们支持的。可以选择用MacPorts或是Homebrew来安装gcc、gfortran，相对比较方便。
+
+3.和在Linux下安装类似，到Earth System Grid网站上下载一个相应版本的NCL binary包。一般情况下下载最新版本的就可以，但是如果你不确定自己的MacOSX的版本，可以执行以下命令来查看：
+
+.. code:: sh
+    sw_vers -productVersion
+    uname -m
+
+然后下载相应版本的文件，类似这种： `ncl_ncarg-6.3.0.MacOS_10.9_64bit_gcc492.tar.gz`
+
+然后就可以参照Linux下的安装方法继续安装过程了。
+
