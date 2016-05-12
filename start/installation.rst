@@ -76,8 +76,6 @@ OpeNDAP主要是用于访问网络数据库，一些国外机构使用OpeNDAP来
 
     source ~/.bashrc
 
-.. note:: 并不建议用这种方式，因为很容易出现各种“版本不匹配”一类的错误。
-
 _________
 
 Windows
@@ -98,16 +96,19 @@ _________
 
 Mac OS
 -----------
+    本小节由 ``keenmisty, Sun Yat-sen University`` 编辑
+
 由于Mac OS有自己奇葩的编译器系统，因此首先，你需要安装Xcode，幸好现在免费了...
 然后搜索安装command line tool，当然假如你是早就已经在Mac上coding的话，这两步可以跳过。然后，
 
-1.你需要安装XQuartz，这样才能在Mac上以X11的形式查看图片。
+1. 你需要安装XQuartz，这样才能在Mac上以X11的形式查看图片。
 
-2.在Mac上安装gcc和gfortran，虽然NCL的运行不一定需要它俩，但是有的时候`*.ncl`是需要它们支持的。可以选择用MacPorts或是Homebrew来安装gcc、gfortran，相对比较方便。
+2. 在Mac上安装gcc和gfortran，虽然NCL的运行不一定需要它俩，但是有的时候 ``*.ncl``是需要它们支持的。可以选择用MacPorts或是Homebrew来安装gcc、gfortran，相对比较方便。
 
-3.和在Linux下安装类似，到Earth System Grid网站上下载一个相应版本的NCL binary包。一般情况下下载最新版本的就可以，但是如果你不确定自己的MacOSX的版本，可以执行以下命令来查看：
+3. 和在Linux下安装类似，到Earth System Grid网站上下载一个相应版本的NCL binary包。一般情况下下载最新版本的就可以，但是如果你不确定自己的MacOSX的版本，可以执行以下命令来查看：
 
 .. code:: sh
+
     sw_vers -productVersion
     uname -m
 
