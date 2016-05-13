@@ -17,11 +17,11 @@ NCL直接支持的数据类型有以下几种：
 - HDF5 [#]_，支持读，后缀为".h5"
 - HDFEOS 5，支持读，后缀为".he5"
 - CCM，支持读，后缀为".ccm"
-- Shapefile [#]_，支持读，后缀为 ".shp" (Shapefile), ".mif" (MapInfo), ".gmt" (Generic Mapping Tools), ".rt1" (TIGER)
+- Shapefile [#]_，支持读，后缀为 ".shp" (Esri), ".mif" (MapInfo), ".gmt" (Generic Mapping Tools), ".rt1" (TIGER)
 
 .. [#] GRIB2文件从4.3.0版开始支持
 .. [#] HDF5文件从6.0.0版开始支持
-.. [#] Shapefile文件从5.1.1版开始支持
+.. [#] Shapefile文件从5.1.1版开始支持，注意“shpfile”文件至少要包括".shp"、".shx"及".dbf"。
 
 支持格式的文件读取
 ^^^^^^^^^^^^^^^^^^^^
@@ -35,6 +35,8 @@ NCL直接支持的数据类型有以下几种：
 | :code:`status` ， 指定文件操作为读取或读写还是创建（可选方式依赖于文件的格式）
 
 .. note:: 对于支持格式的文件在磁盘中可以没有文件扩展名， 但是需要在file_path参数中指定文件扩展名。
+
+.. note:: 对于以上格式的文件，也可采用批量读取的形式进行操作，所用的函数为 :code:`addfiles` 。
 
 范例
 ^^^^^^^^^^^^^^^^^^^^
