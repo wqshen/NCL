@@ -64,6 +64,7 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
    :maxdepth: 2
 
    cookbook/10min2ncl
+   cookbook/plot_interface
    cookbook/named_colors
 
 库函数
