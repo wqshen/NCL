@@ -46,6 +46,14 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
    language/loop
    language/function_procedure
 
+绘图
+--------------------
+.. toctree::
+   :maxdepth: 2
+
+   plot/plot_interface
+
+
 图形源（Resources）
 --------------------
 .. toctree::
@@ -64,7 +72,6 @@ shapefile，ASCII，binary。内建了大量的分析函数。可以很方便的
    :maxdepth: 2
 
    cookbook/10min2ncl
-   cookbook/plot_interface
    cookbook/named_colors
 
 库函数
