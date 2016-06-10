@@ -94,6 +94,9 @@ exclude_patterns = ['_build']
 # output. They are ignored by default.
 #show_authors = False
 
+# he default language to highlight source code in.
+highlight_language = 'ncl'
+
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
 
