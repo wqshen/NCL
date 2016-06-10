@@ -12,7 +12,7 @@ NCL中有两类绘图函数，一类是gsn函数，另一类是gsn_csm函数，g
 
 使用 :code:`load` 关键词来载入NCL函数库的语法如下
 
-.. code::
+.. code:: ncl
 
     load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl"
     load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_csm.ncl"
@@ -104,7 +104,9 @@ ________________________________________________________________________________
 注意这里我们之间将图形函数的第二参数，也就是源变量的值设置为 :code:`False` 了，
 这代表使用函数 :code:`gsn_csm_map_ce` 默认的图形属性设置。
 
-以下代码可复制到NCL命令行中测试::
+以下代码可复制到NCL命令行中测试
+
+.. code:: ncl
 
     begin
         wks = gsn_open_wks("X11", "first_map")
