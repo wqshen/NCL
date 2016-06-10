@@ -55,11 +55,8 @@ new语句包含的参数：
 
 .. code:: ncl
 
-    m = new((/5,6,7/), integer, -999)
-    n = new(dimsizes(m), string)  ; 搭配dimsizes函数可以定义同样大小的数组
-    p = new(10, typeof(n))  ; 使用typeof函数就可以定义与n同样类型的数组变量
-    q = new(10, typeof(n), m@_FillValue)  ; 使用第三个参数则可定义同样缺测值的数组变量
-    x = n  ; 可能直接用另一个变量赋值是最有效的方式
+    m = new( (/5,6,7/), integer, -999)
+
 
 .. note:: 需要认真声明一点，尽管使用起来很像，但new并不是一个函数，而是NCL语句，这意味在new语句中可以直接使用NCL关键词，比如graphic、string， 而不需要使用引号。
 

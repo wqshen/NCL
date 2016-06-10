@@ -14,7 +14,6 @@
 
 import sys
 import os
-import pygments
 # import shlex
 import sphinx_rtd_theme
 
