@@ -121,3 +121,9 @@ ________________________________________________________________________________
 生成的图形
 
 .. image:: ../images/first_map/first_map.PNG
+
+Comments
+========
+
+.. disqus::
+    :disqus_identifier: index

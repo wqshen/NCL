@@ -42,7 +42,7 @@ NCL直接支持的数据类型有以下几种：
 ^^^^^^^^^^^^^^^^^^^^
 
 .. literalinclude:: ../code_examples/visualization/visual_fnl.ncl
-    :language: ruby
+    :language: ncl
     :emphasize-lines: 4, 5, 6, 11, 12
 
 #. 读取文件中的变量，语法是 :code:`f->var_name` ，其中f为文件句柄，而var_name则是文件f中的待读取的变量名
