@@ -1,3 +1,6 @@
+.. highlight:: ncl
+   :linenothreshold: 5
+
 绘制你的第一张地图
 =====================
 
@@ -12,7 +15,7 @@ NCL中有两类绘图函数，一类是gsn函数，另一类是gsn_csm函数，g
 
 使用 :code:`load` 关键词来载入NCL函数库的语法如下
 
-.. code:: ncl
+.. code::
 
     load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl"
     load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_csm.ncl"
@@ -106,7 +109,7 @@ ________________________________________________________________________________
 
 以下代码可复制到NCL命令行中测试
 
-.. code:: ncl
+.. code::
 
     begin
         wks = gsn_open_wks("X11", "first_map")
