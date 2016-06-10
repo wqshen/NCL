@@ -59,3 +59,7 @@ NCL文件和文件变量
 
 文件变量字符串引用
 -------------------
+
+
+.. disqus::
+    :disqus_identifier: first_map

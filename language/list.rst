@@ -87,3 +87,7 @@ NCL列表是唯一一种可以包含不同数据类型或是多种变量组合�
     lt = ListGetType(my_list)
     ListSetType(my_list, "lifo")
     ListSetType(my_list, "fifo")
+
+
+.. disqus::
+    :disqus_identifier: first_map

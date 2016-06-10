@@ -122,8 +122,6 @@ ________________________________________________________________________________
 
 .. image:: ../images/first_map/first_map.PNG
 
-Comments
-========
 
 .. disqus::
-    :disqus_identifier: index
+    :disqus_identifier: first_map

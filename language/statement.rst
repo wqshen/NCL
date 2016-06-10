@@ -129,3 +129,7 @@ record命令
 的关闭任何已经打开的图形或数据文件。
 
 为了条件退出一个脚本，使用 ``exit`` 和 ``status_exit`` 子程序。
+
+
+.. disqus::
+    :disqus_identifier: first_map

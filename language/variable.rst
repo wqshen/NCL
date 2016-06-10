@@ -140,3 +140,7 @@ NCL变量可以有辅助信息，称之为元数据。元数据是从属于变�
 
 命名下标
 ^^^^^^^^^^^^
+
+
+.. disqus::
+    :disqus_identifier: first_map

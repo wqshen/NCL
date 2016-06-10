@@ -225,3 +225,7 @@ NCL中短路求值的具体判定如下表
 
 
 .. [1] ttps://zh.wikipedia.org/wiki/%E7%9F%AD%E8%B7%AF%E6%B1%82%E5%80%BC
+
+
+.. disqus::
+    :disqus_identifier: first_map
