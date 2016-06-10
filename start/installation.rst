@@ -119,5 +119,8 @@ Mac OS
 4. 然后就可以参照Linux下的安装方法继续安装过程了。
 
 
+评论
+----------
+
 .. disqus::
     :disqus_identifier: first_map
