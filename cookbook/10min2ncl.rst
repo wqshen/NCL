@@ -574,10 +574,8 @@ NCL中标量运算和数组运算是一致的
 - 这里使用了列表类型，创建列表使用中括号和左斜杠 [/ /] 将变量包裹起来
 
 
-打赏
-----------
-
 .. image:: ../images/donate/donate.png
     :scale: 40 %
+    :target: :ref:`donate`
 
 
