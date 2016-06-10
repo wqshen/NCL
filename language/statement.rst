@@ -131,6 +131,12 @@ record命令
 为了条件退出一个脚本，使用 ``exit`` 和 ``status_exit`` 子程序。
 
 
+.. image:: ../images/donate/donate.png
+    :scale: 40 %
+    :align: center
+    :target: http://ncl.readthedocs.io/zh_CN/latest/donater.html#donate
+
+
 评论
 ----------
 

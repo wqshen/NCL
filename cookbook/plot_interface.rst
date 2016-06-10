@@ -314,3 +314,9 @@ gsn_csm风格X-Y-X-Y图 （2个X轴,2个Y轴）
 gsn_csm风格X-Y-Y-Y图 （左右右3个Y轴）
 
 `gsn_csm_xy3 <https://www.ncl.ucar.edu/Document/Graphics/Interfaces/gsn_csm_xy3.shtml>`_ 
+
+
+.. image:: ../images/donate/donate.png
+    :scale: 40 %
+    :align: center
+    :target: http://ncl.readthedocs.io/zh_CN/latest/donater.html#donate

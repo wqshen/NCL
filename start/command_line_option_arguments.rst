@@ -150,3 +150,9 @@ NCL预定义的选项包括：
       units :       Years
       long_name :   Model Run Begin Year
     (0)     1930
+
+
+.. image:: ../images/donate/donate.png
+    :scale: 40 %
+    :align: center
+    :target: http://ncl.readthedocs.io/zh_CN/latest/donater.html#donate

@@ -55,6 +55,12 @@ NCL直接支持的数据类型有以下几种：
 .. image:: ../images/visualization/visual_fnl.png
 
 
+.. image:: ../images/donate/donate.png
+    :scale: 40 %
+    :align: center
+    :target: http://ncl.readthedocs.io/zh_CN/latest/donater.html#donate
+
+
 评论
 ----------
 

@@ -579,4 +579,11 @@ NCL中标量运算和数组运算是一致的
     :align: center
     :target: http://ncl.readthedocs.io/zh_CN/latest/donater.html#donate
 
+评论
+----------
+
+.. disqus::
+    :disqus_identifier: KML
+
+
 

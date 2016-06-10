@@ -141,6 +141,13 @@ NCL变量可以有辅助信息，称之为元数据。元数据是从属于变�
 命名下标
 ^^^^^^^^^^^^
 
+
+.. image:: ../images/donate/donate.png
+    :scale: 40 %
+    :align: center
+    :target: http://ncl.readthedocs.io/zh_CN/latest/donater.html#donate
+
+
 评论
 ----------
 

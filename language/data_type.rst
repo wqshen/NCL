@@ -353,6 +353,12 @@ NCL中有一类函数集用于对变量进行类型测试，这类函数接收�
 .. _isscalar:  http://www.ncl.ucar.edu/Document/Functions/Built-in/isscale.shtml
 
 
+.. image:: ../images/donate/donate.png
+    :scale: 40 %
+    :align: center
+    :target: http://ncl.readthedocs.io/zh_CN/latest/donater.html#donate
+
+
 评论
 ----------
 

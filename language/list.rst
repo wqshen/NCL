@@ -89,6 +89,12 @@ NCL列表是唯一一种可以包含不同数据类型或是多种变量组合�
     ListSetType(my_list, "fifo")
 
 
+.. image:: ../images/donate/donate.png
+    :scale: 40 %
+    :align: center
+    :target: http://ncl.readthedocs.io/zh_CN/latest/donater.html#donate
+
+
 评论
 ----------
 

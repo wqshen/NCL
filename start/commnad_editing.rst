@@ -37,3 +37,9 @@ NCL交互式操作中的一些局限。
 
 转义序列
 --------------
+
+
+.. image:: ../images/donate/donate.png
+    :scale: 40 %
+    :align: center
+    :target: http://ncl.readthedocs.io/zh_CN/latest/donater.html#donate
