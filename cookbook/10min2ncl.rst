@@ -519,7 +519,8 @@ NCL中标量运算和数组运算是一致的
 
 ![xy](http://42.96.156.175/wp-content/uploads/2016/03/xy.png)
 
-## 7.2 等值线图
+7.2 等值线图
+^^^^^^^^^^^^^^^^^^^
 
 .. code::
 
@@ -534,7 +535,7 @@ NCL中标量运算和数组运算是一致的
         plot = gsn_csm_contour_map(wks, hgt_avg({500}, :, :), res) ; 调用地图等值线图函数绘图
     end
 
-![contour](http://42.96.156.175/wp-content/uploads/2016/03/contour.png)
+![contour](http://www.atmoscode.com/wp-content/uploads/2016/03/contour.png)
 
 更多图形绘制示例请参阅官网
 
@@ -553,7 +554,8 @@ NCL中标量运算和数组运算是一致的
 - 注意，此时函数 addfile 的第2个参数是 "c" , 代表创建
 - 为节约存储空间，我们可以用pack_values函数将变量压缩为short型，再存入文件
 
-## 8.2 输出到文本文件
+8.2 输出到文本文件
+^^^^^^^^^^^^^^^^^^^^
 输入到文本文件
 
 .. code::
@@ -574,4 +576,3 @@ NCL中标量运算和数组运算是一致的
 
 
 .. image:: ../images/donate/donate.png
-    :target: `打赏`_
