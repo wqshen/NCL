@@ -202,13 +202,14 @@ ________________________________________________________________________________
 :code:`where`
 
 
+.. image:: ../images/donate/donate.png
+    :scale: 40 %
+    :align: center
+    :target: http://ncl.readthedocs.io/zh_CN/latest/donater.html#donate
+
+
 评论
 ----------
 
 .. disqus::
     :disqus_identifier: array
-
-.. image:: ../images/donate/donate.png
-:scale: 40 %
-:align: center
-:target: http://ncl.readthedocs.io/zh_CN/latest/donater.html#donate
