@@ -56,6 +56,7 @@ new语句包含的参数：
 .. code:: ncl
 
     m = new( (/5,6,7/), integer, -999)
+    n = new(dimsizes(m), string)  ; 搭配dimsizes函数可以定义同样大小的数组
 
 
 .. note:: 需要认真声明一点，尽管使用起来很像，但new并不是一个函数，而是NCL语句，这意味在new语句中可以直接使用NCL关键词，比如graphic、string， 而不需要使用引号。
