@@ -1,7 +1,7 @@
 对KML的支持
 ============
 
-**本文作者**：`keenmisty <https://github.com/keenmisty>`_
+*本文作者*：`keenmisty <https://github.com/keenmisty>`_
 
 简介
 ------------
@@ -25,6 +25,12 @@ NCL对于KML的支持起自2013年，由Mohammad Abouali开发，他制作了一
 
 其他值得注意的事情
 ------------
+
+
+.. image:: ../images/donate/donate.png
+    :scale: 40 %
+    :align: center
+    :target: http://ncl.readthedocs.io/zh_CN/latest/donater.html#keenmisty
 
 
 评论

@@ -4,8 +4,11 @@
 
 .. _donate:
 
+为本站作者打赏
+-----------------
+
 支付宝打赏
----------------------
+^^^^^^^^^^^^^^^^
 .. image:: images/donate/0.5RMB.jpg
     :scale: 26 %
 
@@ -20,7 +23,7 @@
 
 
 微信打赏
----------------------
+^^^^^^^^^^^^^^^^
 .. image:: images/donate/weichat_0.5RMB.jpg
     :scale: 26 %
 
@@ -32,6 +35,17 @@
 
 .. image:: images/donate/weichat_10RMB.jpg
     :scale: 26 %
+
+
+为本站贡献者打赏
+-----------------
+
+.. _keenmisty:
+
+keenmisty
+^^^^^^^^^^^^^^^
+
+请贡献者在此增加打赏图片
 
 
 
