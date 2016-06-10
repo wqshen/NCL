@@ -13,10 +13,12 @@ NCL循环和条件判断
 
 do 循环
 ^^^^^^^^^^^^^^
-模型::
+模型:
+
+.. code:: ncl
 
     do i = start, end, stride
-        代码段
+        ;; 代码段
     end do
 
 - i为循环变量，start，end，stride为循环变量的初值，终止值和步长
@@ -27,10 +29,12 @@ do 循环
 
 do while循环
 ^^^^^^^^^^^^^^^^
-模型::
+模型:
+
+.. code::
 
     do while (标量逻辑表达式)
-         代码段
+        ;; 代码段
     end do
 
 - 当标量逻辑表达式的值为真（ :code:`True` ）时，执行循环体代码段
@@ -72,20 +76,24 @@ NCL提供if语句来进行流的控制，NCL中的if语句包含两种：
 
 if-then语句
 ^^^^^^^^^^^^^^^
-模型::
+模型:
+
+.. code:: ncl
 
     if ( 标量逻辑表达式 ) then
-        语句
+        ;; 语句
     end if
 
 if-then-else语句
 ^^^^^^^^^^^^^^^^^^^^^^^
-模型::
+模型:
+
+.. code:: ncl
 
     if( 标量逻辑表达式  ) then
-        语句
+        ;; 语句
     else
-        语句
+        ;; 语句
     end if 
 
 .. note:: 需要强调的，也是导致if语句经常报错的是，标量逻辑表达式的结果必须是单个标量值并且不能为缺测。
@@ -96,16 +104,16 @@ NCL中允许对if语句进行嵌套，然而NCL中并没有else if语句，但�
 用else if，通过将else和if放置在一行上，可以构成else if，尽管这并不是真正意义上的
 else if，而是对if语句的嵌套。因而这个if后面同样需要end if。
 
-.. code::
+.. code:: ncl
 
     if ( 标量逻辑表达式 ) then
-        语句
+        ;; 语句
     else if (标量逻辑表达式 ) then
-        语句
+        ;; 语句
     else if ( 标量逻辑表达式 ) then
-        语句
-    else
-        语句
+        ;; 语句
+    else 
+        ;; 语句
     end if
     end if
     end if

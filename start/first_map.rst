@@ -1,6 +1,3 @@
-.. highlight:: ncl
-   :linenothreshold: 5
-
 绘制你的第一张地图
 =====================
 

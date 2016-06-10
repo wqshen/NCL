@@ -41,7 +41,7 @@
 
 .. code::
     
-    local local_var1, local_var2, local_var3, ...``
+    local local_var1, local_var2, local_var3, ...
 
 3 使用begin来开始封装函数主体
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -106,6 +106,7 @@ ________________________________________________________________________________
 下面看一个具体例子
     
 .. literalinclude:: ../code_examples/function_procedure/local_val.ncl
+    :language: ncl
     :emphasize-lines: 13-14, 21-22
     :linenos:
 

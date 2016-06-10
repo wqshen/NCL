@@ -166,10 +166,12 @@ NCL中短路求值的具体判定如下表
 等号右边变量的属性、维名称和坐标赋给左侧变量。
 
 .. literalinclude:: ../code_examples/language_operator_expression/var_to_var_assign_1.ncl
+    :language: ncl
     :emphasize-lines: 7
 
 
 .. literalinclude:: ../code_examples/language_operator_expression/var_to_var_assign_2.ncl
+    :language: ncl
     :emphasize-lines: 12
 
 重新赋值运算符
@@ -194,7 +196,7 @@ NCL中短路求值的具体判定如下表
 
 值到变量重新赋值
 ^^^^^^^^^^^^^^^^^
-.. code::
+.. code:: ncl
 
     a = (/1, 2, 3, 4, 5/)  ; 将整型一维5元素数组赋给变量a
     a := (/"I", "like"， "NCL"/)  ; 给变量a重新赋值, a变为字符串型一维3元素数组
@@ -202,7 +204,7 @@ NCL中短路求值的具体判定如下表
 
 变量到变量重新赋值
 ^^^^^^^^^^^^^^^^^^^^^
-.. code::
+.. code:: ncl
 
     a = new((/2, 2/), string)  ; 创建一个20*20的字符串组
     ; 定义一个新的NCL变量b
