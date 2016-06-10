@@ -1,6 +1,8 @@
 对KML的支持
 ============
 
+**本文作者**：`keenmisty <https://github.com/keenmisty>`_
+
 简介
 ------------
 
@@ -23,4 +25,11 @@ NCL对于KML的支持起自2013年，由Mohammad Abouali开发，他制作了一
 
 其他值得注意的事情
 ------------
+
+
+评论
+----------
+
+.. disqus::
+    :disqus_identifier: KML
 
