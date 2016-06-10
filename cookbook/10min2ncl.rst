@@ -576,6 +576,6 @@ NCL中标量运算和数组运算是一致的
 
 .. image:: ../images/donate/donate.png
     :scale: 40 %
-    :target: :ref:`donate`
+    :target: :ref: donate
 
 
