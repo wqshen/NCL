@@ -1,7 +1,8 @@
 对KML的支持
 ============
 
-*本文作者*：`keenmisty <https://github.com/keenmisty>`_
+*本文作者* ：`keenmisty <https://github.com/keenmisty>`_ 
+
 
 简介
 ------------
@@ -18,6 +19,54 @@ NCL对于KML的支持起自2013年，由Mohammad Abouali开发，他制作了一
 使用
 ------------
 
+首先，需要在你自己的ncl脚本中声明调用这一工具：
+
+.. code:: sh
+
+    load "$NCARG_ROOT/lib/ncarg/nclscripts/contrib/NCL_GETools.ncl"
+
+然后即可使用以下函数或者过程：
+
+* 函数
+
+  - get_coordinate_system_string
+  - GetAltModeNumber
+  - read_ict
+  - squeeze
+  - get_KML_IconHref
+  - ones
+  - zeros
+  - dim_dimsizes
+  - Gray2RGBA
+  - Gray2cIndex
+  - ToHex
+  - add_KML_ColorMapStyles
+
+* 过程
+
+  - add_KML_Description
+  - add_KML_Address
+  - add_KML_Range
+  - add_KML_Name
+  - add_KML_Coordinates
+  - add_KML_Width
+  - add_KML_Open
+  - add_KML_FlyToView
+  - add_KML_Extrude
+  - add_KML_Visibility
+  - add_KML_Tessellate
+  - add_KML_Fill
+  - add_KML_Outline
+  - add_KML_Altitude
+  - add_KML_AltMode
+  - add_KML_Color
+  - add_KML_North
+  - add_KML_South
+  - add_KML_East
+  - add_KML_West
+  - add_KML_Rotation
+  - add_KML_StyleUrl
+  - add_KML_HideChildrenStyle
 
 例子
 ------------
