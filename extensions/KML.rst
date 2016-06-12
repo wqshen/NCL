@@ -120,6 +120,7 @@ NCL对于KML的支持起自2013年，由Mohammad Abouali开发，他制作了一
 * Point2KML的使用
 
 新增一个文件名为`1.ncl`的脚本，内容如下：
+
 .. code:: NCL
     load "$NCARG_ROOT/lib/ncarg/nclscripts/contrib/NCL_GETools.ncl"
       begin
@@ -136,6 +137,7 @@ NCL对于KML的支持起自2013年，由Mohammad Abouali开发，他制作了一
       end
 
 执行这个ncl，即可得到一个名为`sysu_sas_building.kml`的文件，把它放入GoogleEarth中，即可看到如下的样子(当然，首先要能加载出来GE中的地球，否则需要首先翻下墙)：
+
 .. image:: ../images/extensions/point2kml.png
     :scale: 70 %
     :align: center
