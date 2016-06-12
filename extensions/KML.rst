@@ -121,7 +121,7 @@ NCL对于KML的支持起自2013年，由Mohammad Abouali开发，他制作了一
 
 新增一个文件名为`1.ncl`的脚本，内容如下：
 
-.. code:: NCL
+.. code:: sh
     load "$NCARG_ROOT/lib/ncarg/nclscripts/contrib/NCL_GETools.ncl"
       begin
       
