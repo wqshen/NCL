@@ -67,9 +67,55 @@ NCL对于KML的支持起自2013年，由Mohammad Abouali开发，他制作了一
   - add_KML_Rotation
   - add_KML_StyleUrl
   - add_KML_HideChildrenStyle
+  - hide_KML_Children
+  - add_KML_Href
+  - add_KML_Icon
+  - add_KML_Heading
+  - add_KML_TimeSpan
+  - add_KML_TimeStamp_When
+  - add_KML_LineStyle
+  - add_KML_IconStyle
+  - add_KML_PolyStyle
+  - add_KML_LineString
+  - add_KML_LatLonBox
+  - add_KML_LinearRing
+  - add_KML_OuterBoundaryIs
+  - add_KML_InnerBoundaryIs
+  - add_KML_GOverlay
+  - add_KML_Polygon
+  - add_KML_nSidedPolygon
+  - add_KML_Point
+  - Open_KML_MultiGeometry
+  - Close_KML_MultiGeometry
+  - Open_KML_Link
+  - Close_KML_Link
+  - Open_KML_NetworkLink
+  - Close_KML_NetworkLink
+  - Open_KML_Folder
+  - Close_KML_Folder
+  - Open_KML_Placemark
+  - Close_KML_Placemark
+  - Open_KML_Style
+  - Close_KML_Style
+  - Open_KML_Document
+  - Close_KML_Document
+  - OpenKML
+  - CloseKML
+  - RasterTimeSeries2KML
+  - SHP2KML
+  - Point2KML
+  - Velocity2KML
+  - Points2KML
+  - Collect_KMLs
+  - Path2KML
+  - Measurements2KML
+  - UnstructGrid2KML
+  - UnstructData2KML
+  - UnstructVelocity2KML
 
 例子
 ------------
+
 
 
 其他值得注意的事情
