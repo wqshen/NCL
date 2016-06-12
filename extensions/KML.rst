@@ -7,7 +7,7 @@
 简介
 ------------
 
-KML(Keyhold Markup Language)是一种XML语法格式的标记语言，可以在多种应用程序中显示，包括 Google Earth、Google Map、ArcGlobe、 ArcMAP等，驴友们制作路书的时候也经常采用这种格式制作。
+KML(Keyhold Markup Language)是一种XML语法格式的标记语言，可以在多种应用程序中显示，包括 Google Earth、Google Map、ArcGIS(ArcMap/ArcGlobe)等，驴友们制作路书的时候也经常采用这种格式制作。
 
 它的优势是可以把几何、符号系统、描述、属性、影像和行为等数据封装到单个源中，非常方便数据的共享和在线展示。
 
@@ -25,7 +25,7 @@ NCL对于KML的支持起自2013年，由Mohammad Abouali开发，他制作了一
 
     load "$NCARG_ROOT/lib/ncarg/nclscripts/contrib/NCL_GETools.ncl"
 
-然后即可使用以下函数或者过程：
+然后即可在你个人的ncl脚本中调用以下函数或者过程，来完成相应的动作：
 
 * 函数
 
@@ -113,14 +113,39 @@ NCL对于KML的支持起自2013年，由Mohammad Abouali开发，他制作了一
   - UnstructData2KML
   - UnstructVelocity2KML
 
+
 例子
 ------------
 
+* Point2KML的使用
+
+新增一个文件名为`1.ncl`的脚本，内容如下：
+.. code:: NCL
+    load "$NCARG_ROOT/lib/ncarg/nclscripts/contrib/NCL_GETools.ncl"
+      begin
+      
+        Opt=True
+        Opt@Name="Dihuan Building"
+        Opt@Lat=23.103685
+        Opt@Lon=113.294506
+        Opt@Description="School of Atmospheric Science, Sun yat-sen University"
+        Opt@Verbose=True
+
+        kml_FileName="sysu_sas_building"
+        Point2KML(kml_FileName, Opt)
+      end
+
+执行这个ncl，即可得到一个名为`sysu_sas_building.kml`的文件，把它放入GoogleEarth中，即可看到如下的样子(当然，首先要能加载出来GE中的地球，否则需要首先翻下墙)：
+.. image:: ../images/extensions/point2kml.png
+    :scale: 70 %
+    :align: center
 
 
 其他值得注意的事情
 ------------
 
+* Ryan Pavlick制作了一个更深入的ncl制作kml的库，`link <https://github.com/rpavlick/kmlncl>`_
+* 更推荐使用ArcGIS等地理信息系统工具处理kml文件
 
 .. image:: ../images/donate/donate.png
     :scale: 40 %
