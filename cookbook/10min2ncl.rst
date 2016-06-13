@@ -337,7 +337,7 @@ NCL中标量运算和数组运算是一致的
 - NCL支持自动类型转换，当整型变量和浮点型变量运算时，整型将自动转换为浮点型参与计算
 - 同理，任何类型变量与字符串相加时，都将首先转为字符串型，然后执行字符串连接运算
 - 算数运算将导致变量元数据（坐标，维，属性）的丢失
-- `copy_VarCoords <https://www.ncl.ucar.edu/Document/Functions/Contributed/copy_VarCoords.shtml>`_可以将一个变量的坐标复制给另一个变量
+- `copy_VarCoords <https://www.ncl.ucar.edu/Document/Functions/Contributed/copy_VarCoords.shtml>`_ 可以将一个变量的坐标复制给另一个变量
 
 4.2 平均
 ^^^^^^^^^^
