@@ -44,8 +44,8 @@
 
 keenmisty
 ^^^^^^^^^^^^^^^
-
-请贡献者在此增加打赏图片
+.. image:: images/donate/changm1rmb.jpg
+    :scale: 26 %
 
 
 
