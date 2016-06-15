@@ -289,7 +289,7 @@ NCL强类型语言的性质决定了变量的扩展实际上是一个新变量�
 .. code::
 
     arr6 = ispan(-6, 6, 1)
-    arr6 = where(arr6.lt.0, arr6+256, arr6*2) ; 将小于0的值加上256, 大于等于0的值做平方
+    arr6 = where(arr6.lt.0, arr6+256, arr6^2) ; 将小于0的值加上256, 大于等于0的值做平方
 
     arr6@_FillValue = default_fillvalue(typeof(arr6))
     arr6_inv = 1. / where(arr6.ne.0, arr6, arr6@_FillValue) ; 禁用0除
