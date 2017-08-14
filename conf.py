@@ -36,7 +36,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 if on_rtd:
 	extensions = ['sphinx.ext.mathjax', 'sphinxcontrib.disqus']
 else:
-	extensions = ['sphinx.ext.mathjax', 'rst2pdf.pdfbuilder', 'sphinxcontrib.disqus']
+	extensions = ['sphinx.ext.mathjax', 'sphinxcontrib.disqus'] #'rst2pdf.pdfbuilder', 
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
