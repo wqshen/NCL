@@ -15,7 +15,10 @@
 import sys
 import os
 # import shlex
-import sphinx_rtd_theme
+
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+if not on_rtd:  # only import and set the theme if we're building docs locally
+	import sphinx_rtd_theme
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
