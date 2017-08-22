@@ -25,7 +25,7 @@ NCL支持多种数据格式的直接读取，常见如 NetCDF 、GRIB 、HDF 等
     f = addfile("hgt_2009_2012_monthly.nc", "r")
 
 
-- 范例数据hgt_2009_2012_monthly.nc下载， `传送门 <http://pan.baidu.com/s/1nuyQp4X>`_ ，提取码 `pb2g`
+- 范例数据 hgt_2009_2012_monthly.nc 下载， `传送门 <http://pan.baidu.com/s/1nuyQp4X>`_ ，提取码 `pb2g`
 - 函数将文件指针返回给文件对象f，以便进行下一步的操作。
 
 文件被打开后，可通过对文件对象的操作查看文件的基本信息和文件变量信息
@@ -38,7 +38,7 @@ NCL支持多种数据格式的直接读取，常见如 NetCDF 、GRIB 、HDF 等
 - 打印子程序 `print <https://www.ncl.ucar.edu/Document/Functions/Built-in/print.shtml>`_ 用于文件对象时，将文件的全部信息，包括文件的基本信息、文件的全局属性、维和所有的文件变量概略到屏幕（标准输出）。
 - 子程序 `list_filevars <https://www.ncl.ucar.edu/Document/Functions/Built-in/list_filevars.shtml>`_ 仅将文件中的所有变量概略输出到屏幕。
 
-通常打开文件就是为了读取文件变量，使用 ->; 来读取文件中的变量
+通常打开文件就是为了读取文件变量，使用 ``->`` 来读取文件中的变量
 
 .. code::
 
@@ -50,7 +50,8 @@ NCL支持多种数据格式的直接读取，常见如 NetCDF 、GRIB 、HDF 等
 
 2 选取
 -------------
-实际分析中，我们需要选择多维数组变量中某特定的 天/高度层/位置 的数据，不可避免地要进行数据选取工作。NCL支持一般语言中的数组下标（整数）和其针对气象格点数据专门开发的坐标下标来选取数据，后者极大地方便了我们对气象数据的操作。
+实际分析中，我们需要选择多维数组变量中某特定的 天/高度层/位置 的数据，不可避免地要进行数据选取工作。
+NCL支持一般语言中的数组下标（整数）和其针对气象格点数据专门开发的坐标下标来选取数据，后者极大地方便了我们对气象数据的操作。
 
 2.1 数组下标
 ^^^^^^^^^^^^^^^
@@ -90,7 +91,9 @@ NCL支持多种数据格式的直接读取，常见如 NetCDF 、GRIB 、HDF 等
 - 使用大括号直接索引指定层 500 hPa, 同理可用于指定经纬度
 - 冒号 : 可以索引整个维
 
-借助于维名称，可以实现维顺序的重新排列，二维数组的维序交换就是装置，高维数组的维序变化较难用语言解释下句选取数组hgt的第1个时次 | 500-700hPa | 90-120°E | 所有纬度 的部分数据
+借助于维名称，可以实现维顺序的重新排列，二维数组的维序交换就是装置，高维数组的维序变化较难用语言解释。
+
+下句选取数组hgt的第1个时次 | 500-700hPa | 90-120°E | 所有纬度 的部分数据
 
 .. code::
 
@@ -115,7 +118,7 @@ NCL支持多种数据格式的直接读取，常见如 NetCDF 、GRIB 、HDF 等
 2.4 条件选取
 ^^^^^^^^^^^^^
 如果要获取变量中满足一定条件的值的位置怎么办？这时候需要使用条件索引技巧
-使用 ind 函数返回一维数组中满足条件的元素的位置
+使用 `ind <https://www.ncl.ucar.edu/Document/Functions/Built-in/ind.shtml>`_ 函数返回一维数组中满足条件的元素的位置
 
 .. code::
 
@@ -125,9 +128,9 @@ NCL支持多种数据格式的直接读取，常见如 NetCDF 、GRIB 、HDF 等
     a(valid) = 0 ; 将缺测值所在位置元素赋值为0
     a(ind(a.ne.0)) = -a(ind(a.ne.0)) * 2 + 1 ; 对所有不等于0的元素操作
 
-- 设定变量的缺测值属性，给变量 _FillValue 属性赋值
-- `ismissing <https://www.ncl.ucar.edu/Document/Functions/Built-in/ismissing.shtml>`_ 函数返回数组中每一个元素缺测测试的结果 (True | False)
-- 关系运算符包括 .gt. (大于) | .ge. (大于或等于) | .lt. (小于) | .le. (小于或等于) | .eq. (等于) | .ne. (不等于)
+- 设定变量的缺测值属性，给变量的 ``_FillValue`` 属性赋值
+- `ismissing <https://www.ncl.ucar.edu/Document/Functions/Built-in/ismissing.shtml>`_ 函数返回数组中每一个元素缺测测试的结果 (``True`` | ``False``)
+- 关系运算符包括 ``.gt.`` (大于) | ``.ge.`` (大于或等于) | ``.lt.`` (小于) | ``.le.`` (小于或等于) | ``.eq.`` (等于) | ``.ne.`` (不等于)
 
 多维数组条件选取没有特定的函数，需要联合 `ndtooned <https://www.ncl.ucar.edu/Document/Functions/Built-in/ndtooned.shtml>`_ 和 `ind_resolve <https://www.ncl.ucar.edu/Document/Functions/Built-in/ind_resolve.shtml>`_ , 详情请点击函数链接
 
@@ -171,7 +174,7 @@ NCL强类型语言的性质决定了变量的扩展实际上是一个新变量�
     a = table_attach_rows (x1, x2, 0)
     write_matrix(a, "3f6.2", False)
 
-- 反斜杠 \\ 用于续行，当一行无法写下时，使用其将多行连接
+- 反斜杠 ``\`` 用于续行，当一行无法写下时，使用其将多行连接
 - `write_matrix <https://www.ncl.ucar.edu/Document/Functions/Built-in/write_matrix.shtml>`_ 按格式打印二维数组
 
 输出如下
@@ -231,9 +234,8 @@ NCL强类型语言的性质决定了变量的扩展实际上是一个新变量�
 | 1 2 3 4 5 6 7 8 9 10 11 12
 | 1 2 3 4 5 6 7 8 9 10 11 12
 
-按指定匹配维扩展到与指定变量同等大小
-假定数组q的维数 为 nt x ny x nx x nz ，而数组dz 为一维数组，长度为nz
-按 q 的第3为扩展 dz 到 q 的大小
+按指定匹配维扩展到与指定变量同等大小, 假定数组q的维数 为 nt x ny x nx x nz ，而数组dz 为一维数组，长度为nz,
+按 q 的第3维扩展 dz 到 q 的大小
 
 .. code::
 
@@ -259,7 +261,7 @@ NCL强类型语言的性质决定了变量的扩展实际上是一个新变量�
     x = ispan(-10, 10, 1)
     x = mask(x, x.lt.0, True)
 
-- mask函数，第二个表达式参数等于第三个参数，对应于第一个参数的位置上的值保护起来
+- `mask <https://www.ncl.ucar.edu/Document/Functions/Built-in/mask.shtml>`_ 函数，第二个表达式参数等于第三个参数，对应于第一个参数的位置上的值保护起来
 - 上例中，x小于0为真的元素被保护起来，其余的值全部被置为缺测
 
 下例中读取温度变量TS和下垫面标识变量ORO，并用下垫面标识来做海洋或陆地的蒙版
@@ -278,7 +280,7 @@ NCL强类型语言的性质决定了变量的扩展实际上是一个新变量�
         ocean_only = mask(TS, ORO, 0) ; 当ORO=0时，返回TS的值，其余置缺测
     end
 
-- 下载范例数据， `请点击 <http://pan.baidu.com/s/1o7flDoe>`_ ，提取码：r4rx
+- 下载范例数据， `请点击 <http://pan.baidu.com/s/1o7flDoe>`_ ，提取码：``r4rx``
 - 上述方法将海洋或陆地的值做蒙版，以便只绘制海洋或陆地的白化图形
 
 3.5 条件操作
@@ -303,7 +305,7 @@ NCL强类型语言的性质决定了变量的扩展实际上是一个新变量�
 - 必要时可以嵌套使用 `where <https://www.ncl.ucar.edu/Document/Functions/Built-in/where.shtml>`_ 函数处理更复杂的条件分支结构
 - `typeof <https://www.ncl.ucar.edu/Document/Functions/Built-in/typeof.shtml>`_ 函数，给定变量，返回变量的类型
 - `default_fillvalue <https://www.ncl.ucar.edu/Document/Functions/Built-in/default_fillvalue.shtml>`_ 返回给定类型的默认缺测值
-- 逻辑运算符包括 .and. （与）| .or. （或） | .not. （非） | .xor. （异或）
+- 逻辑运算符包括 ``.and.`` （与）| ``.or.`` （或） | ``.not.`` （非） | ``.xor.`` （异或）
 
 4 基础代数
 --------------
@@ -311,7 +313,7 @@ NCL强类型语言的性质决定了变量的扩展实际上是一个新变量�
 ^^^^^^^^^^^^^^^^^^
 NCL中标量运算和数组运算是一致的
 
-+(加) | - (减) | * (乘) | / (除) | % (取模) | ^ (幂)
+``+`` (加) | ``-`` (减) | ``*`` (乘) | ``/`` (除) | ``%`` (取模) | ``^`` (幂)
 
 .. code::
 
@@ -343,13 +345,13 @@ NCL中标量运算和数组运算是一致的
 
 4.2 平均
 ^^^^^^^^^^
-对变量求整体的平均avg
+对变量求整体的平均 `avg <https://www.ncl.ucar.edu/Document/Functions/Built-in/avg.shtml>`_
 
 .. code::
 
     print(avg(arr7))
 
-指定维的平均 dim_avg | dim_avg_n |dim_avg_n_Wrap
+指定维的平均 `dim_avg <https://www.ncl.ucar.edu/Document/Functions/Built-in/dim_avg.shtml>`_ | `dim_avg_n <https://www.ncl.ucar.edu/Document/Functions/Built-in/dim_avg_n.shtml>`_ | `dim_avg_n_Wrap <https://www.ncl.ucar.edu/Document/Functions/Contributed/dim_avg_n_Wrap.shtml>`_
 
 .. code::
 
@@ -359,13 +361,17 @@ NCL中标量运算和数组运算是一致的
 
 4.3 最大值/最小值
 ^^^^^^^^^^^^^^^^^^
-子程序 printMinMax 可以输出一个变量的最大值和最小值
+子程序 `printMinMax <https://www.ncl.ucar.edu/Document/Functions/Contributed/printMinMax.shtml>`_ 可以输出一个变量的最大值和最小值,
+常用于程序的debug
 
 .. code::
 
     printMinMax(hgt)
 
-函数 min |dim_min|dim_min_n|dim_min_n_Wrap可以获取整体最小值、最右维最小值、指定维最小值、保留元数据
+函数 `min <https://www.ncl.ucar.edu/Document/Functions/Built-in/min.shtml>`_ | 
+`dim_min <https://www.ncl.ucar.edu/Document/Functions/Built-in/dim_min.shtml>`_ | 
+`dim_min_n<https://www.ncl.ucar.edu/Document/Functions/Built-in/dim_min_n.shtml>`_ | 
+`dim_min_n_Wrap <https://www.ncl.ucar.edu/Document/Functions/Contributed/dim_min_n_Wrap.shtml>`_ 可以获取整体最小值、最右维最小值、指定维最小值、保留元数据
 
 .. code::
 
@@ -374,9 +380,12 @@ NCL中标量运算和数组运算是一致的
     print(dim_min_n(hgt, 0)) ; 指定维的最小值
     print(dim_min_n_Wrap(hgt, 1)) ; 指定维的最小值，保留变量元数据
 
-- Wrap函数，当一个函数以Wrap结尾时，代表其运算结果能自动保留运算变量的元数据(维、属性、坐标)
+- ``Wrap`` 函数，当一个函数以``Wrap``结尾时，代表其运算结果能自动保留运算变量的元数据(维、属性、坐标)
 
-函数 max |dim_max|dim_max_n|dim_max_n_Wrap可以获取整体最大值、最右维最大值、指定维最大值、保留元数据
+函数 `max <https://www.ncl.ucar.edu/Document/Functions/Built-in/max.shtml>`_ |
+`dim_max <https://www.ncl.ucar.edu/Document/Functions/Built-in/dim_max.shtml>`_| 
+`dim_max_n <https://www.ncl.ucar.edu/Document/Functions/Built-in/dim_max_n.shtml>`_ |
+`dim_max_n_Wrap <https://www.ncl.ucar.edu/Document/Functions/Contributed/dim_max_n_Wrap.shtml>`_ 可以获取整体最大值、最右维最大值、指定维最大值、保留元数据
 
 .. code::
 
@@ -385,7 +394,8 @@ NCL中标量运算和数组运算是一致的
     print(dim_max_n(hgt, 0)) ; 指定维的最大值
     print(dim_max_n_Wrap(hgt, 1)) ; 指定维的最大值，保留变量元数据
 
-函数minind|maxind可以获取一维数组最小值|最大值所在的索引位置
+函数 `minind <https://www.ncl.ucar.edu/Document/Functions/Built-in/minind.shtml>`_ | 
+`maxind <https://www.ncl.ucar.edu/Document/Functions/Built-in/maxind.shtml>`_ 可以获取一维数组最小值|最大值所在的索引位置
 
 .. code::
 
@@ -397,6 +407,7 @@ NCL中标量运算和数组运算是一致的
 
 ______________________________________________________________________________________________
 华丽丽的十分钟分界线，如果你一步一步学习来，我想此时说好的十分钟已到。没错，十分钟是不可能的！
+
 
 
 5 时间序列
@@ -431,36 +442,36 @@ ________________________________________________________________________________
         printVarSummary(time) ; 输出时间变量的概略信息
     end
 
-- asciiread 函数可以读取文本文件
-- str_get_cols 指定起始和结束的列序号来获取字符串/串组的子串
-- cd_inv_string按指定格式将字符串/串组解析为NCL日期时间
-- str_get_field 按指定分隔符划分字符串/串组的域，通过域编号来获取子串
-- 加号 + 在NCL中可以用于连接字符串或同样大小的串组
-- to函数，以to开头的函数用于强制转换变量类型，注意不能直接返回给原变量（新变量 | :=）
-- tofloat将输入的变量类型转换为浮点型
+- `asciiread <https://www.ncl.ucar.edu/Document/Functions/Built-in/asciiread.shtml>`_ 函数可以读取文本文件
+- `str_get_cols <https://www.ncl.ucar.edu/Document/Functions/Built-in/str_get_cols.shtml>`_ 指定起始和结束的列序号来获取字符串/串组的子串
+- `cd_inv_string <https://www.ncl.ucar.edu/Document/Functions/User_contributed/cd_inv_string.shtml>`_ 按指定格式将字符串/串组解析为NCL日期时间
+- `str_get_field <https://www.ncl.ucar.edu/Document/Functions/Built-in/str_get_field.shtml>`_ 按指定分隔符划分字符串/串组的域，通过域编号来获取子串
+- 加号 ``+`` 在NCL中可以用于连接字符串或同样大小的串组
+- ``to``函数，以``to``开头的函数用于强制转换变量类型，注意不能直接赋值给原变量（赋值到新的变量 或使用重新赋值运算符 ``:=``）
+- `tofloat <https://www.ncl.ucar.edu/Document/Functions/Built-in/tofloat.shtml>`_ 将输入的变量类型转换为浮点型
 
 日期时间字符指定
 
 +------+---------------------------+------+----------------------------------------+
-| 字符 |     含义                  | 字符 |   含义                                 |
+| 字符  |     含义                  | 字符 |   含义                                 |
 +======+===========================+======+========================================+
-| Y    | 四位数年 （2016）         | y    | 两位数年（16）                         |
+| Y    | 四位数年 （2016）           | y    | 两位数年（16）                         |
 +------+---------------------------+------+----------------------------------------+
-| C    | 大写月名缩写（JUN）       | c    | 小写月名缩写（Jun）                    |
+| C    | 大写月名缩写（JUN）          | c    | 小写月名缩写（Jun）                    |
 +------+---------------------------+------+----------------------------------------+
-| F    | 大写全月名缩写（JUNE      | f    | 小写全月名缩写（June）                 |
+| F    | 大写全月名缩写（JUNE         | f    | 小写全月名缩写（June）                 |
 +------+---------------------------+------+----------------------------------------+
-| N    | 两位数字月（07, 12）      | n    | 一位/两位数字月（7, 12）               |
+| N    | 两位数字月（07, 12）         | n    | 一位/两位数字月（7, 12）               |
 +------+---------------------------+------+----------------------------------------+
-| D    | 两位数字天（04, 28）      | d    | 一位/两位数字天（4, 28）               |
+| D    | 两位数字天（04, 28）         | d    | 一位/两位数字天（4, 28）               |
 +------+---------------------------+------+----------------------------------------+
-| H    | 两位数字小时（09, 12      | h    | 一位/两位数字小时（9, 12）             |
+| H    | 两位数字小时（09, 12         | h    | 一位/两位数字小时（9, 12）             |
 +------+---------------------------+------+----------------------------------------+
-| M    | 两位数字分钟（04, 58      | m    | 一位/两位数字分钟（4, 58）             |
+| M    | 两位数字分钟（04, 58         | m    | 一位/两位数字分钟（4, 58）             |
 +------+---------------------------+------+----------------------------------------+
-| S    | 两位数字秒（02, 60）      | s    | 一位/两位数字秒（2, 60）               |
+| S    | 两位数字秒（02, 60）         | s    | 一位/两位数字秒（2, 60）               |
 +------+---------------------------+------+----------------------------------------+
-| J    | 三位数一年中第几天（091） | j    | 一/二/三位数一年中第几天（2, 91, 365） |
+| J    | 三位数一年中第几天（091）     | j    | 一/二/三位数一年中第几天（2, 91, 365） |
 +------+---------------------------+------+----------------------------------------+
 
 5.2 转换NCL时间到格式化字符串
@@ -477,14 +488,14 @@ ________________________________________________________________________________
     idx_MAM = ind(mon.ge. 3 .and. mon.le.5) ; spring
     hgt_MAM_avg = dim_avg_n_Wrap(hgt(idx_MAM, :, :, :), 0) ; spring average
 
-- cd_string需要载入到命名空间才能使用
+- `cd_string <https://www.ncl.ucar.edu/Document/Functions/User_contributed/cd_string.shtml>`_ 需要载入到命名空间才能使用
 - 变量的每个维，使用 & 符号，连接维名称， 即可取出维变量，维变量也是个标准的NCL变量
-- dimsizes可以获取变量的每一维的大小，返回到一个数组，要获取变量有几维，嵌套使用dimsizes
-- ``toint`` 转换输入的变量类型到整型，注意不是原地转换
+- `dimsizes <https://www.ncl.ucar.edu/Document/Functions/Built-in/dimsizes.shtml>`_ 可以获取变量的每一维的大小，返回到一个数组，要获取变量有几维，嵌套使用dimsizes
+- `toint <https://www.ncl.ucar.edu/Document/Functions/Built-in/toint.shtml>`_ 转换输入的变量类型到整型，注意不是原地转换
 
 5.3 转换NCL时间到世界时
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-将NCL中的时间变量转换到世界时，以便于下一步的计算或查看，使用cd_calendar
+将NCL中的时间变量转换到世界时，以便于下一步的计算或查看，使用 `cd_calendar <https://www.ncl.ucar.edu/Document/Functions/Built-in/cd_calendar.shtml>`_
 
 .. code::
 
@@ -501,7 +512,7 @@ ________________________________________________________________________________
     month_abbr(month) + " " + sprinti("%0.4i", year)
     print(date_str)
 
-- cd_calendar的第二个参数可以指定返回值的格式，从而应付不同的情景
+- `cd_calendar <https://www.ncl.ucar.edu/Document/Functions/Built-in/cd_calendar.shtml>`_的第二个参数可以指定返回值的格式，从而应付不同的情景
 
 6 流程控制
 --------------
@@ -539,7 +550,7 @@ NCL中提供两种循环实现语句，一种是 ``do`` 语句，另一种是 ``
         i = i + 1 ; 控制循环变量在循环体内的变化，如果循环过程 i 一直不变可就死循环了哦
     end do
 
-循环语句中可以使用 break 和 continue 来控制循环过程，其中:
+循环语句中可以使用 ``break`` 和 ``continue`` 来控制循环过程，其中:
 
 - ``break`` 语句用于中断整个循环，转而执行循环体后面的语句
 - ``continue`` 语句用于中断本次循环，继续下一次循环过程
@@ -575,7 +586,7 @@ NCL中提供两种循环实现语句，一种是 ``do`` 语句，另一种是 ``
         end if  ; 结束条件一
     end do
 
-- 一个if语句怎么那么多 end if,不要怀疑，那是因为NCL中并没有 else if 语句，而上述代码中的 else if 不过是将 else 和 if 两个语句放在同一行，造成else if 的假象罢了，这点有点坑哦
+- 一个if语句怎么那么多 ``end if``,不要怀疑，那是因为NCL中并没有 ``else if`` 语句，而上述代码中的 ``else if`` 不过是将 ``else`` 和 ``if`` 两个语句放在同一行，造成``else if`` 的假象罢了，这点有点坑哦
 - if 语句以 ``if 条件判断 then`` 开始，以 ``end if`` 结束，可使用 if ... then - else - end if 来展开分支结构
 
 7 函数
@@ -635,8 +646,8 @@ NCL中既包括大量的气象诊断和绘图函数，同时也可以自定义�
     fout = addfile("hgt_annually.nc", "c")
     fout->hgt = hgt_avg
 
-- 注意，此时函数 addfile 的第2个参数是 "c" , 代表创建
-- 为节约存储空间，我们可以用pack_values函数将变量压缩为short型，再存入文件
+- 注意，此时函数 ``addfile`` 的第2个参数是 "c" , 代表创建
+- 为节约存储空间，我们可以用 `pack_values <https://www.ncl.ucar.edu/Document/Functions/Contributed/pack_values.shtml>`_ 函数将变量压缩为short型，再存入文件
 
 9.2 输出到文本文件
 ^^^^^^^^^^^^^^^^^^^^
@@ -652,10 +663,10 @@ NCL中既包括大量的气象诊断和绘图函数，同时也可以自定义�
     y = random_uniform(0,1000.,npts)
     write_table("file2.txt","w",[/j,x,i,y,k/], "string_%03i %8.2f %4.0i %8.1f string_%03i")
 
-- 函数generate_unique_indices 生成随机的索引值
-- 函数random_uniform 生成均匀分布的随机数
-- 函数 write_table 将列表变量按指定格式字符串写入文件
-- 这里使用了列表类型，创建列表使用中括号和左斜杠 [/ /] 将变量包裹起来
+- 函数 `generate_unique_indices <https://www.ncl.ucar.edu/Document/Functions/Contributed/generate_unique_indices.shtml>`_ 生成随机的索引值
+- 函数 `random_uniform <https://www.ncl.ucar.edu/Document/Functions/Built-in/random_uniform.shtml>`_ 生成均匀分布的随机数
+- 函数 `write_table <https://www.ncl.ucar.edu/Document/Functions/Built-in/write_table.shtml>`_ 将列表变量按指定格式字符串写入文件
+- 这里使用了列表类型，创建列表使用中括号和左斜杠 ``[/ /]`` 将变量包裹起来
 
 
 .. image:: ../images/donate/donate.png
