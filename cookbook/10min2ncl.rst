@@ -601,7 +601,7 @@ NCL中既包括大量的气象诊断和绘图函数，同时也可以自定义�
         plot = gsn_csm_xy (wks, hgt&amp;lat, hgt(0, {500}, :, {120}), res) ; 调用折线图绘图函数绘图
     end ;结束代码块
 
-![xy](http://42.96.156.175/wp-content/uploads/2016/03/xy.png)
+.. image:: images/cook_book/xy.png
 
 8.2 等值线图
 ^^^^^^^^^^^^^^^^^^^
@@ -619,7 +619,7 @@ NCL中既包括大量的气象诊断和绘图函数，同时也可以自定义�
         plot = gsn_csm_contour_map(wks, hgt_avg({500}, :, :), res) ; 调用地图等值线图函数绘图
     end
 
-![contour](http://www.atmoscode.com/wp-content/uploads/2016/03/contour.png)
+.. image:: images/cook_book/contour.png
 
 更多图形绘制示例请参阅官网
 
